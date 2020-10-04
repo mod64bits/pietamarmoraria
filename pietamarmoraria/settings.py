@@ -19,7 +19,7 @@ SECRET_KEY = config('SECRET_KEY')
 
 DEBUG = config('DEBUG', default=True, cast=bool)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '172.0.0.1', 'pietamarmoraria.ind.br']
 
 AUTH_USER_MODEL = 'usuarios.User'
 
@@ -69,12 +69,26 @@ WSGI_APPLICATION = 'pietamarmoraria.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-default_db_url = 'sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')
-parse_database = partial(dj_database_url.parse, conn_max_age=600)
-DATABASES = {
-    'default': config('DATABASE_URL', default=default_db_url, cast=parse_database)
-}
 
+if DEBUG:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
+else:
+
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'pietamar_db_site',
+            'USER': 'pietamar_site',
+            'PASSWORD': '+pM!dLH[nLI.',
+            'HOST': 'localhost',
+            'PORT': '5432',
+        }
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
