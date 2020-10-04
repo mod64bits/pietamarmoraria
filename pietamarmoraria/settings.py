@@ -21,10 +21,6 @@ DEBUG = config('DEBUG', default=True, cast=bool)
 
 ALLOWED_HOSTS = []
 
-if not DEBUG:
-    ALLOWED_HOSTS.append(config(ALLOWED_HOSTS, cast=Csv()))
-
-
 AUTH_USER_MODEL = 'usuarios.User'
 
 # Application definition
