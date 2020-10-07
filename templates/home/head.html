@@ -6,7 +6,7 @@
                         <div class="col-xl-2 col-lg-2">
                             <div class="logo">
                                 <a href="index.html">
-{#                                    <img src="{% static 'home/img/logo.png' %}" alt="">#}
+{#                                    <img src="{{ logo.url }}" width="50" height="40"alt="">#}
                                     <p class="text-uppercase text-success">Pieta</p>
                                 </a>
                             </div>
@@ -36,7 +36,7 @@
                                     <a href="#">Login</a>
                                 </div>
                                 <div class="number">
-                                    <p>Contato:  <a href="#"> 11 2981-9574</a></p>
+                                    <p>Contato:  <a href="#"> {{ telefone }}</a></p>
                                 </div>
                             </div>
                         </div>
