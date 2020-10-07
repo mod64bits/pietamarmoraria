@@ -1,3 +1,7 @@
 from django.contrib import admin
+from .models import InformacoesSite
 
-# Register your models here.
+
+@admin.register(InformacoesSite)
+class InformacoesSiteAdmin(admin.ModelAdmin):
+    list_display = ('nome', 'email', 'telefone',  'created', 'modified', )

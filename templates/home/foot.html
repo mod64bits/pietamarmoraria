@@ -7,7 +7,7 @@
                             <h3 class="footer_title">
                                 Sobre Nós
                             </h3>
-                            <p>Heaven fruitful doesn't over lesser days appear creeping seasons so behold bearing days open</p>
+                            <p>{{ sobre }}</p>
                             <div class="footer_logo">
                                 <a href="#">
 {#                                    <img src="{% static 'home/img/footer_logo.png' %}" alt="">#}
@@ -21,11 +21,10 @@
                             <h3 class="footer_title">
                                 Informação de Contato
                             </h3>
-                            <p>Endereço :Av. Mendes da Rocha
-                                Nº 1633 - Vila Medeiros São Paulo - SP</p>
+                            <p>Endereço : {{ endereco }}</p>
                             <ul>
-                                <li><a href="#">Fone : 11 2981-9574</a></li>
-                                <li><a href="#">Email : pieta@pietamarmoraria.ind.br</a></li>
+                                <li><a href="#">Fone : {{ telefone }}</a></li>
+                                <li><a href="#">Email : {{ email }}</a></li>
                             </ul>
 
                         </div>
@@ -63,7 +62,7 @@
                         <div class="socail_links">
                             <ul>
                                 <li>
-                                    <a href="#">
+                                    <a href="{{ facebook }}">
                                         <i class="ti-facebook"></i>
                                     </a>
                                 </li>

@@ -19,7 +19,7 @@ SECRET_KEY = config('SECRET_KEY')
 
 DEBUG = config('DEBUG', default=True, cast=bool)
 
-ALLOWED_HOSTS = ['localhost', '172.0.0.1', 'pietamarmoraria.ind.br']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'pietamarmoraria.ind.br']
 
 AUTH_USER_MODEL = 'usuarios.User'
 
@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'widget_tweaks',
     'apps.home',
     'apps.usuarios',
 ]
@@ -60,6 +61,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'core.context_processors.site_infor',
             ],
         },
     },
