@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'widget_tweaks',
     'apps.home',
     'apps.usuarios',
+    'apps.dashboard',
 ]
 
 MIDDLEWARE = [
@@ -138,3 +139,6 @@ if not DEBUG:
 else:
     STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static")
     MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+
+LOGIN_REDIRECT_URL = '/dashboard'
+LOGOUT_REDIRECT_URL = '/'

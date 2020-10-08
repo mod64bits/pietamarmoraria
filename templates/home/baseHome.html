@@ -2,7 +2,7 @@
 <html lang="pt-br">
 
 <head>
-    <title>{% block titulo %}Base{% endblock titulo %}</title>
+    <title>{% block titulo %}Pietá Marmoraria{% endblock titulo %}</title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -83,6 +83,13 @@
                                 </ul>
                             </li>
                               <li><a href="javascript:void(0)">Contato</a></li>
+                              <li><a href="javascript:void(0)">Web-Mail</a></li>
+                            {% if user.id is None %}
+                            <li><a href="{% url 'dashboard:dashboard' %}"><i class="fa fa-user" aria-hidden="true"></i> Login</a></li>
+                            {% else %}
+                            <li><a href="{% url 'dashboard:dashboard' %}"><i class="fa fa-user" aria-hidden="true"></i> {{ user }}</a></li>
+                            {% endif %}
+
                         </ul>
                     </div>
                 </div>

@@ -1,3 +1,4 @@
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.messages.views import SuccessMessageMixin
 from django.shortcuts import render
 from django.views.generic import TemplateView, UpdateView
@@ -8,7 +9,7 @@ class Home(TemplateView):
     template_name = 'home/home.html'
 
 
-class EditarInformacoesDoSite(SuccessMessageMixin, UpdateView):
+class EditarInformacoesDoSite(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     model = InformacoesSite
     fields = '__all__'
     template_name = 'home/EditInfoSite.html'
