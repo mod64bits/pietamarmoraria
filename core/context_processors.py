@@ -1,4 +1,5 @@
 from apps.home.models import InformacoesSite
+from apps.servicos.models import Categoria
 
 
 def site_infor(request):
@@ -17,3 +18,9 @@ def site_infor(request):
         SITEINFO['twitter'] = i.twitter
 
     return SITEINFO
+
+
+def categorias(request):
+    return {
+        'categorias': Categoria.objects.all()
+    }

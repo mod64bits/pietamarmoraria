@@ -1,0 +1,121 @@
+{% extends 'baseAdmin/base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'baseAdmin/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css' %}">
+{% endblock css %}
+
+{% block titulo %}
+    Nova Categoria
+{% endblock titulo %}
+
+{% block content_header %}
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1 class="m-0 text-dark">Nova Categoria</h1>
+                </div><!-- /.col -->
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="{% url 'dashboard:dashboard' %}">Dashboard</a></li>
+                        <li class="breadcrumb-item active">Nova Categoria</li>
+                    </ol>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </div>
+{% endblock content_header %}
+
+{% block content %}
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- left column -->
+                <div class="col-md-6">
+                    <!-- general form elements -->
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <h3 class="card-title">Cadastrar Nova Categoria</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <!-- form start -->
+                        <form role="form" method="post" encType="multipart/form-data">{% csrf_token %}
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label for="nome">{{ form.nome.label }}</label>
+                                    {% render_field form.nome placeholder="Nome da Categoria" class+="form-control" %}
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-primary">Salvar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h3 class="card-title">Todas as Categorias</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body p-0">
+                        <table class="table table-striped">
+                            <thead>
+                            <tr>
+                                <th style="width: 10px">ID</th>
+                                <th>Nome</th>
+                                <th>Slug</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for categoria in categorias %}
+                            <tr>
+                                <td>{{ categoria.id }}</td>
+                                <td><a href="{% url 'servicos:editar_categoria' categoria.slug %}"> {{ categoria.nome }}</a></td>
+                                <td>{{ categoria.slug }}</td>
+                            </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div><!-- /.container-fluid -->
+
+    </section>
+
+{% endblock content %}
+
+{% block script %}
+    <script src="{% static 'baseAdmin/plugins/sweetalert2/sweetalert2.min.js' %}"></script>
+    {% if messages %}
+        <script type="text/javascript">
+            $(function (){
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: 'top-end',
+                    showConfirmButton: true,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                        toast.addEventListener('mouseenter', Swal.stopTimer)
+                        toast.addEventListener('mouseleave', Swal.resumeTimer)
+                    }
+                })
+
+                Toast.fire({
+                    icon: 'success',
+                    {% for menssage in  messages %}
+                        title: '{{ menssage }}'
+                    {% endfor %}
+                })
+
+            })
+        </script>
+    {% endif %}
+{% endblock script %}

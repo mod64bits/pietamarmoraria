@@ -7,6 +7,7 @@ pytz==2020.1
 sqlparse==0.3.1
 toml==0.10.1
 uniconfig==0.0.1
+django-active-link
 
 
 

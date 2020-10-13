@@ -1,3 +1,15 @@
 {% extends 'home/baseHome.html' %}
 {% load static %}
 
+{% block servicos %}
+    {% for servico in servicos %}
+        <div class="col-lg-4 col-md-12 col-sm-12">
+            <div class="iq-mtb-20">
+                <img alt="alt" class="img-fluid wd-full" src="{{ servico.imagem.url }}">
+                <h5 class="iq-font-dark iq-tw-6 iq-mt-20"><a href="#">{{ servico.nome }}</a></h5>
+                <p>{{ servico.descricao }}</p>
+                <div class="read-more green"><a href="#">Saber mais <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></div>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}

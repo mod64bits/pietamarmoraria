@@ -19,10 +19,12 @@ from apps.home import urls as home_urls
 from apps.dashboard import urls as dashboard_url
 from django.conf import settings
 from django.conf.urls.static import static
+from apps.servicos import urls as servicos_urls
 
 
 urlpatterns = [
     path('', include(home_urls)),
+    path('servicos/', include(servicos_urls)),
     path('dashboard/', include(dashboard_url)),
     path('admin/', admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),

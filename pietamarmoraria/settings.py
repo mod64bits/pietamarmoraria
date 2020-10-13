@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'apps.home',
     'apps.usuarios',
     'apps.dashboard',
+    'apps.servicos',
 ]
 
 MIDDLEWARE = [
@@ -62,7 +63,9 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                #apps
                 'core.context_processors.site_infor',
+                'core.context_processors.categorias',
             ],
         },
     },
