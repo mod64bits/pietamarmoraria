@@ -1,53 +1,76 @@
-<header>
-        <div class="header-area ">
-            <div id="sticky-header" class="main-header-area">
-                <div class="container-fluid p-0">
-                    <div class="row align-items-center no-gutters">
-                        <div class="col-xl-2 col-lg-2">
-                            <div class="logo">
-                                <a href="index.html">
-{#                                    <img src="{{ logo.url }}" width="50" height="40"alt="">#}
-                                    <p class="text-uppercase text-success">Pieta</p>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-xl-6 col-lg-6">
-                            <div class="main-menu  d-none d-lg-block">
-                                <nav>
-                                    <ul id="navigation">
-                                        <li><a class="active" href="index.html">home</a></li>
-                                        <li><a href="about.html">Sobre</a></li>
-                                        <li><a href="#">Portfolio</a>
-                                            <ul class="submenu">
-                                                    <li><a href="facilites.html">Serviços</a></li>
-                                                    <li><a href="property.html">acabamento</a></li>
-                                                    <li><a href="elements.html">elements</a></li>
-                                            </ul>
-                                        </li>
-
-                                        <li><a href="contact.html">Contato</a></li>
-                                        <li><a href="contact.html">Web-Mail</a></li>
-
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-4 d-none d-lg-block">
-                            <div class="social_wrap d-flex align-items-center justify-content-end">
-                                <div class="login_text">
-                                    <a href="#">Login</a>
-                                </div>
-                                <div class="number">
-                                    <p>Contato:  <a href="#"> {{ telefone }}</a></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="mobile_menu d-block d-lg-none"></div>
-                        </div>
+{% load static %}
+<header class="header-01 white re-none">
+<div class="topbar">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="topbar-left">
+                        <ul class="list-inline">
+                            <li class="list-inline-item"><i class="fa fa-phone text-blue"></i> {{ telefone }}</li>
+                            <li class="list-inline-item"><i class="fa fa-envelope-o"> </i> {{ email }}</li>
+                        </ul>
                     </div>
+                </div>
 
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="topbar-right text-right">
+                        <ul class="list-inline">
+                            <li class="list-inline-item">
+                                <ul class="list-inline iq-left">
+                                     {% if user.id is None %}
+                                    <li class="list-inline-item"><a href="{% url 'dashboard:dashboard' %}"><i class="fa fa-lock"></i>Entar</a></li>
+                                    {% else %}
+                                    <li class="list-inline-item"><a href="{% url 'dashboard:dashboard' %}"><i class="fa fa-lock"></i>Sair</a></li>
+                                    {% endif %}
+                                    <li class="list-inline-item"><a href="#" data-toggle="modal" data-target=".iq-register-from" data-whatever="@fat"><i class="fa fa-user"></i>Registrar</a></li>
+                                </ul>
+                            </li>
+                            {% if user.id is None %}
+                            <li class="list-inline-item"><a href="#"><i class="fa fa-user"></i>Olá Visitante</a></li>
+                            {% else %}
+                            <li class="list-inline-item"><a href="#"><i class="fa fa-user"></i>{{ user }}</a></li>
+                            {% endif %}
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-    </header>
+    </div>
+    <!-- menu start -->
+    <nav id="menu-1" class="mega-menu">
+        <!-- menu list items container -->
+        <section class="menu-list-items">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <!-- menu logo -->
+                        <ul class="menu-logo">
+                            <li>
+                                <a href="#">
+                                    <img id="logo_dark" src="{% static 'home/images/pieta-logo.png' %}" alt="logo">
+                                </a>
+                            </li>
+                        </ul>
+
+                        <!-- menu links -->
+                        <ul class="menu-links">
+                            <!-- active class -->
+                            <li class="active"><a href="javascript:void(0)">Home</a></li>
+                            <li><a href="javascript:void(0)">Sobre</a></li>
+                            <li><a href="javascript:void(0)">Portifolio</a>
+                                <!-- drop down multilevel  -->
+                                <ul class="drop-down-multilevel">
+                                    <li><a href="#">Produto 1</a></li>
+                                    <li><a href="#">Produto 2</a></li>
+                                    <li><a href="#">Produto 3</a></li>
+                                </ul>
+                            </li>
+                              <li><a href="javascript:void(0)">Contato</a></li>
+                              <li><a href="javascript:void(0)">Web-Mail</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </nav>
+</header>

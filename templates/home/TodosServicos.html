@@ -1,0 +1,20 @@
+{% extends 'home/ServicoBase.html' %}
+{% load static %}
+
+
+{% block servicos %}
+    <div class="row">
+        {% for servico in servicos_lista %}
+            <div class="col-lg-4 col-md-4 col-sm-4">
+                <div class="iq-mtb-20">
+                    <img alt="" class="img-fluid" src="{{ servico.imagem.url }}">
+                    <h5 class="iq-font-dark iq-tw-6 iq-mt-20">{{ servico.nome }}</h5>
+                    <p>{{ servico.descricao }}</p>
+                    <div class="read-more green"><a href="#">Orçamento <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></div>
+                    {% empty %}
+                    <h5 class="iq-font-dark iq-tw-6 iq-mt-20">Sem Categoria Cadstrada</h5>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock servicos %}

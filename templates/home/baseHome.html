@@ -1,6 +1,7 @@
 {% load static %}<!doctype html>
 <html lang="pt-br">
 
+
 <head>
     <title>{% block titulo %}Pietá Marmoraria{% endblock titulo %}</title>
 
@@ -52,51 +53,7 @@
 <!-- loading End -->
 
 <!-- HEADER  -->
-<header class="header-05 white">
-    <!-- menu start -->
-    <nav id="menu-1" class="mega-menu">
-        <!-- menu list items container -->
-        <section class="menu-list-items">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <!-- menu logo -->
-                        <ul class="menu-logo">
-                            <li>
-                                <a href="#">
-                                    <img id="logo_dark" src="{% static 'home/images/pieta-logo.png' %}" alt="logo">
-                                </a>
-                            </li>
-                        </ul>
-
-                        <!-- menu links -->
-                        <ul class="menu-links">
-                            <!-- active class -->
-                            <li class="active"><a href="javascript:void(0)">Home</a></li>
-                            <li><a href="javascript:void(0)">Sobre</a></li>
-                            <li><a href="javascript:void(0)">Portifolio</a>
-                                <!-- drop down multilevel  -->
-                                <ul class="drop-down-multilevel">
-                                    <li><a href="#">Produto 1</a></li>
-                                    <li><a href="#">Produto 2</a></li>
-                                    <li><a href="#">Produto 3</a></li>
-                                </ul>
-                            </li>
-                              <li><a href="javascript:void(0)">Contato</a></li>
-                              <li><a href="javascript:void(0)">Web-Mail</a></li>
-                            {% if user.id is None %}
-                            <li><a href="{% url 'dashboard:dashboard' %}"><i class="fa fa-user" aria-hidden="true"></i> Login</a></li>
-                            {% else %}
-                            <li><a href="{% url 'dashboard:dashboard' %}"><i class="fa fa-user" aria-hidden="true"></i> {{ user }}</a></li>
-                            {% endif %}
-
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </nav>
-</header>
+{% include 'home/head.html' %}
 <!-- /HEADER END -->
 
 
@@ -159,7 +116,9 @@ Services -->
                     </div>
                 </div>
             </div>
+
             <div class="row">
+               {% block servicos %}
                 <div class="col-lg-4 col-md-12 col-sm-12">
                     <div class="iq-mtb-20">
                         <img alt="alt" class="img-fluid wd-full" src="{% static 'home/images/about-us/04.jpg' %}">
@@ -168,22 +127,7 @@ Services -->
                         <div class="read-more green"><a href="#">Saber mais <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-12 col-sm-12">
-                    <div class="iq-mtb-20">
-                        <img alt="alt" class="img-fluid wd-full" src="{% static 'home/images/about-us/05.jpg' %}">
-                        <h5 class="iq-font-dark iq-tw-6 iq-mt-20">Serviço Nome</h5>
-                        <p>Descrição</p>
-                        <div class="read-more green"><a href="#">Saber mais <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></div>
-                    </div>
-                </div>
-               <div class="col-lg-4 col-md-12 col-sm-12">
-                    <div class="iq-mtb-20">
-                        <img alt="alt" class="img-fluid wd-full" src="{% static 'home/images/about-us/04.jpg' %}">
-                        <h5 class="iq-font-dark iq-tw-6 iq-mt-20">Serviço Nome</h5>
-                        <p>Descrição</p>
-                        <div class="read-more green"><a href="#">Saber mais <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></div>
-                    </div>
-                </div>
+                {% endblock %}
             </div>
         </div>
     </section>
