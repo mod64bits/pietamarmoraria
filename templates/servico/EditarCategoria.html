@@ -76,6 +76,10 @@
                                 <td><a href="{% url 'servicos:editar_categoria' categoria.slug %}"> {{ categoria.nome }}</a></td>
                                 <td>{{ categoria.slug }}</td>
                             </tr>
+                                {% empty %}
+                                  <tr>
+                                <td>Sem Categoria Cadastrada!</td>
+                            </tr>
                             {% endfor %}
                             </tbody>
                         </table>

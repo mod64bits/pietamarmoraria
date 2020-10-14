@@ -94,6 +94,10 @@
                                         <td><a href="{% url 'servicos:editar_categoria' servico.categoria.slug %}">{{ servico.categoria.nome }}</a></td>
                                         <td>{{ servico.slug }}</td>
                                     </tr>
+                                    {% empty %}
+                                    <tr>
+                                        <td>Sem Serviços Cadastrados</td>
+                                    </tr>
                                 {% endfor %}
                                 </tbody>
                             </table>

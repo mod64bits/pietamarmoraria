@@ -50,7 +50,7 @@
         <img src="{% static 'home/images/loader.png' %}" alt="loder">
     </div>
 </div>
-{% include 'home/head.html' %}
+{% include 'home/headf.html' %}
 
 {% block servico_topo %}
     <section class="overview-block-ptb iq-over-black-70 jarallax iq-breadcrumb3 text-left iq-font-white" style="background-image: url({% static 'home/images/bg/03.jpg'%}); background-position: center center; background-repeat: no-repeat; background-size: cover;">
@@ -89,6 +89,10 @@ Tabs -->
                         {% for categoria in categorias %}
                         <li class="nav-item">
                             <a class="nav-link {% if categoria_atual == categoria %}active{% endif %}"    href="{% url 'home:categoria_servico' categoria.nome %}" role="tab" aria-controls="retina" aria-selected="true">{{ categoria.nome }}</a>
+                        </li>
+                            {% empty %}
+                             <li class="nav-item">
+                            <a class="nav-link active" >Sem Categoria Cadastrada</a>
                         </li>
                         {% endfor %}
                     </ul>
