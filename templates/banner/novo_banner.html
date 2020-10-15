@@ -1,0 +1,129 @@
+{% extends 'baseAdmin/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'baseAdmin/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css' %}">
+{% endblock css %}
+
+{% block titulo %}
+    Novo Serviço
+{% endblock titulo %}
+
+{% block content_header %}
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1 class="m-0 text-dark">Cadastro Serviço</h1>
+                </div><!-- /.col -->
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="{% url 'dashboard:dashboard' %}">Dashboard</a></li>
+                        <li class="breadcrumb-item active">Novo Serviço</li>
+                    </ol>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </div>
+{% endblock content_header %}
+
+{% block content %}
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- left column -->
+                <div class="col-md-6">
+                    <!-- general form elements -->
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <h3 class="card-title">Cadastro de Serviço</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <!-- form start -->
+                        <form role="form" method="post" encType="multipart/form-data">{% csrf_token %}
+                            <div class="card-body">
+                                <div class="form-group">
+                                    {{ form|crispy }}
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-primary">Salvar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+               <div class="card col-md-6">
+              <div class="card-header">
+                <h3 class="card-title">Todos os Bannes</h3>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                  <button type="button" class="btn btn-tool" data-card-widget="remove">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body p-0">
+                <ul class="products-list product-list-in-card pl-2 pr-2">
+                    {% for banner in banners %}
+                  <li class="item">
+                    <div class="product-img">
+                      <img src="{{ banner.imagem.url }}" alt="Product Image" class="img-size-50">
+                    </div>
+                    <div class="product-info">
+                      <a href="javascript:void(0)" class="product-title">{{ banner.nom }}
+                        <span class="badge badge-warning float-right">{{ banner.categoria_banner.nome }}</span></a>
+                      <span class="product-description">
+                        {{ banner.descricao }}
+                      </span>
+                    </div>
+                  </li>
+                    {% endfor %}
+                </ul>
+              </div>
+              <!-- /.card-body -->
+              <div class="card-footer text-center">
+                <a href="javascript:void(0)" class="uppercase">View All Products</a>
+              </div>
+              <!-- /.card-footer -->
+            </div>
+            </div>
+            <!-- /.row -->
+        </div><!-- /.container-fluid -->
+
+    </section>
+
+{% endblock content %}
+
+{% block script %}
+    <script src="{% static 'baseAdmin/plugins/sweetalert2/sweetalert2.min.js' %}"></script>
+    {% if messages %}
+        <script type="text/javascript">
+            $(function (){
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: 'top-end',
+                    showConfirmButton: true,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                        toast.addEventListener('mouseenter', Swal.stopTimer)
+                        toast.addEventListener('mouseleave', Swal.resumeTimer)
+                    }
+                })
+
+                Toast.fire({
+                    icon: 'success',
+                    {% for menssage in  messages %}
+                        title: '{{ menssage }}'
+                    {% endfor %}
+                })
+
+            })
+        </script>
+    {% endif %}
+{% endblock script %}

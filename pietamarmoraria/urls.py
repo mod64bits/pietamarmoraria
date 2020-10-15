@@ -20,10 +20,12 @@ from apps.dashboard import urls as dashboard_url
 from django.conf import settings
 from django.conf.urls.static import static
 from apps.servicos import urls as servicos_urls
+from apps.banner import urls as banner_urls
 
 
 urlpatterns = [
     path('', include(home_urls)),
+    path('banner/', include(banner_urls)),
     path('servicos/', include(servicos_urls)),
     path('dashboard/', include(dashboard_url)),
     path('admin/', admin.site.urls),

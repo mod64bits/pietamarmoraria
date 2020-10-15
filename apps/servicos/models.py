@@ -6,7 +6,7 @@ from core.signals import create_slug
 
 
 class Categoria(models.Model):
-    nome = models.CharField('Nome', max_length=50, unique=True)
+    nome = models.SlugField('Nome', max_length=50, unique=True)
     slug = models.SlugField(max_length=255, unique=True, editable=False)
     slug_field_name = 'slug'
     slug_from = 'nome'
