@@ -6,6 +6,7 @@ from .models import InformacoesSite
 
 from core.alxiliarServicos import servicos_home
 from apps.servicos.models import Servico
+from ..banner.models import Banner
 
 
 class Home(TemplateView):
@@ -14,6 +15,7 @@ class Home(TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['servicos'] = servicos_home()
+        context['banners'] = Banner.objects.filter(ativo=True)
         return context
 
 
