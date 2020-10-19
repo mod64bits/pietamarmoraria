@@ -9,7 +9,6 @@ from dj_database_url import parse as db_url
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = config('SECRET_KEY')
 
@@ -37,6 +36,7 @@ INSTALLED_APPS = [
     'apps.dashboard',
     'apps.servicos',
     'apps.banner',
+    'apps.contato',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
@@ -65,7 +65,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                #apps
+                # apps
                 'core.context_processors.site_infor',
                 'core.context_processors.categorias',
             ],
@@ -135,8 +135,8 @@ DATE_INPUT_FORMATS = ['%d/%m/%Y']
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-        os.path.join(BASE_DIR, "static"),
-    ]
+    os.path.join(BASE_DIR, "static"),
+]
 MEDIA_URL = "/media/"
 if not DEBUG:
     STATIC_ROOT = "/home/pietamar/www/static"
@@ -147,3 +147,9 @@ else:
 
 LOGIN_REDIRECT_URL = '/dashboard'
 LOGOUT_REDIRECT_URL = '/'
+
+EMAIL_HOST = "mail.pietamarmoraria.ind.br"
+EMAIL_HOST_USER = "contato@pietamarmoraria.ind.br"
+EMAIL_HOST_PASSWORD = "5te,EM!j1sZ9"
+EMAIL_PORT = 465
+EMAIL_USE_SSL = True

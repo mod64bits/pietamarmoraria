@@ -1,6 +1,6 @@
 {% load static %}
 <header class="header-01 white re-none">
-<div class="topbar">
+    <div class="topbar">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-6">
@@ -17,18 +17,18 @@
                         <ul class="list-inline">
                             <li class="list-inline-item">
                                 <ul class="list-inline iq-left">
-                                     {% if user.id is None %}
-                                    <li class="list-inline-item"><a href="{% url 'dashboard:dashboard' %}"><i class="fa fa-lock"></i>Entar</a></li>
+                                    {% if user.id is None %}
+                                        <li class="list-inline-item"><a href="{% url 'dashboard:dashboard' %}"><i class="fa fa-lock"></i>Entar</a></li>
                                     {% else %}
-                                    <li class="list-inline-item"><a href="{% url 'dashboard:dashboard' %}"><i class="fa fa-lock"></i>Sair</a></li>
+                                        <li class="list-inline-item"><a href="{% url 'dashboard:dashboard' %}"><i class="fa fa-lock"></i>Sair</a></li>
                                     {% endif %}
                                     <li class="list-inline-item"><a href="#" data-toggle="modal" data-target=".iq-register-from" data-whatever="@fat"><i class="fa fa-user"></i>Registrar</a></li>
                                 </ul>
                             </li>
                             {% if user.id is None %}
-                            <li class="list-inline-item"><a href="#"><i class="fa fa-user"></i>Olá Visitante</a></li>
+                                <li class="list-inline-item"><a href="#"><i class="fa fa-user"></i>Olá Visitante</a></li>
                             {% else %}
-                            <li class="list-inline-item"><a href="#"><i class="fa fa-user"></i>{{ user }}</a></li>
+                                <li class="list-inline-item"><a href="#"><i class="fa fa-user"></i>{{ user }}</a></li>
                             {% endif %}
                         </ul>
                     </div>
@@ -53,21 +53,23 @@
                         </ul>
 
                         <!-- menu links -->
-                        <ul class="menu-links">
-                            <!-- active class -->
-                            <li class="active"><a href="javascript:void(0)">Home</a></li>
-                            <li><a href="javascript:void(0)">Sobre</a></li>
-                            <li><a href="javascript:void(0)">Portifolio</a>
-                                <!-- drop down multilevel  -->
-                                <ul class="drop-down-multilevel">
-                                    <li><a href="#">Produto 1</a></li>
-                                    <li><a href="#">Produto 2</a></li>
-                                    <li><a href="#">Produto 3</a></li>
-                                </ul>
-                            </li>
-                              <li><a href="javascript:void(0)">Contato</a></li>
-                              <li><a href="javascript:void(0)">Web-Mail</a></li>
-                        </ul>
+                        {% with request.resolver_match.url_name as url_name %}
+                            <ul class="menu-links">
+                                <!-- active class -->
+                                <li class="{% if url_name == 'home'%}active{% endif %}"><a href="{% url 'home:home' %}">Home</a></li>
+                                <li><a href="javascript:void(0)">Sobre</a></li>
+                                <li><a href="javascript:void(0)">Portifolio</a>
+                                    <!-- drop down multilevel  -->
+                                    <ul class="drop-down-multilevel">
+                                        <li><a href="#">Produto 1</a></li>
+                                        <li><a href="#">Produto 2</a></li>
+                                        <li><a href="#">Produto 3</a></li>
+                                    </ul>
+                                </li>
+                                <li class="{% if url_name == 'contato'%}active{% endif %}"><a href="{% url 'home:contato' %}">Contato</a></li>
+                                <li><a href="javascript:void(0)">Web-Mail</a></li>
+                            </ul>
+                        {% endwith %}
                     </div>
                 </div>
             </div>
