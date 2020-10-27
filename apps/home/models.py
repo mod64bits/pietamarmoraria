@@ -2,7 +2,6 @@ from django.db import models
 from django.urls import reverse
 
 
-
 class InformacoesSite(models.Model):
     nome = models.CharField('Nome', max_length=50)
     email = models.EmailField('E-mail')
@@ -19,10 +18,6 @@ class InformacoesSite(models.Model):
 
     def __str__(self):
         return self.nome
-
-    
-
-
 
     def get_absolute_url(self):
         return reverse('home:edit_informacoes_site', kwargs={'pk': self.pk})
