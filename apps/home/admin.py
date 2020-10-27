@@ -4,4 +4,4 @@ from .models import InformacoesSite
 
 @admin.register(InformacoesSite)
 class InformacoesSiteAdmin(admin.ModelAdmin):
-    list_display = ('nome', 'email', 'telefone',  'created', 'modified', )
+    list_display = ('nome', 'email', 'telefone',  'endereco', 'sobre', 'facebook', 'instagram')
