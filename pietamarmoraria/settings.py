@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'apps.servicos',
     'apps.banner',
     'apps.contato',
+    'apps.portifolio',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
