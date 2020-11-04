@@ -1,7 +1,9 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.messages.views import SuccessMessageMixin
 from django.views.generic import TemplateView, UpdateView, CreateView
+from django.views.generic.list import ListView
 from .models import InformacoesSite
+from apps.portifolio.models import Projeto
 from core.envia_email import EnviaEmail
 
 from core.alxiliarServicos import servicos_home
@@ -31,10 +33,10 @@ class ContatoSite(SuccessMessageMixin, CreateView):
     template_name = 'home/Contato.html'
     success_message = "%(nome)s"
 
-    
 
-    
-    
+class ProjetosList(ListView):
+    model = Projeto
+    context_object_name = 'todos_projetos'
+    template_name = 'home/ListaDeProjetos.html'
 
-    
 

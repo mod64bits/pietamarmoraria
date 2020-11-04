@@ -1,0 +1,32 @@
+{% extends 'home/ProjetosBase.html' %}
+{% load static %}
+
+{% block postagem %}
+    {% for projeto in todos_projetos %}
+    <div class="col-lg-6 col-sm-12">
+        <div class="iq-blog-entry white-bg">
+            <div class="iq-entry-image clearfix">
+                <img class="img-fluid" src="{% static 'home/images/blog/01.jpg' %}" alt="#">
+                <span class="tag"><i class="ion-image"></i> {{ projeto.Categoria }}</span>
+                <span class="date">{{ projeto.created.day }}<small>{{ projeto.mes }}</small></span>
+            </div>
+            <div class="iq-blog-detail">
+                <div class="iq-entry-title iq-mb-10">
+                    <a href="#">
+                        <h5 class="iq-tw-6">{{ projeto.nome }}</h5>
+                    </a>
+                </div>
+                <div class="iq-entry-content">
+                    <p>{{ projeto.descricao }}
+                    </p>
+                </div>
+                <ul class="iq-entry-meta iq-mt-10">
+                    <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i> Qwilo</a></li>
+                    <li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i> 6 like</a></li>
+                    <li><a href="#"><i class="fa fa-comments" aria-hidden="true"></i> 9 comments</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+{% endblock postagem %}

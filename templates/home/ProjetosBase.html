@@ -1,0 +1,221 @@
+{% load static %}<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Pieta Todos Os Projetos</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'home/images/favicon.ico' %}" />
+    <!-- bootstrap -->
+    <link href="{% static 'home/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css" />
+    <!-- font awesome -->
+    <link href="{% static 'home/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css" />
+    <!-- ionicons icon -->
+    <link href="{% static 'home/css/ionicons.min.css' %}" rel="stylesheet" type="text/css" />
+    <!-- mega menu -->
+    <link href="{% static 'home/css/mega-menu/mega_menu.css' %}" rel="stylesheet" type="text/css" />
+    <!-- owl-carousel -->
+    <link href="{% static 'home/css/owl-carousel/owl.carousel.css' %}" rel="stylesheet" type="text/css" />
+    <!-- magnific popup -->
+    <link href="{% static 'home/css/magnific-popup.css' %}" rel="stylesheet" type="text/css" />
+    <!-- animate -->
+    <link href="{% static 'home/css/animate.css' %}" rel="stylesheet" type="text/css" />
+    <!-- media element player -->
+    <link href="{% static 'home/css/mediaelementplayer.min.css' %}" rel="stylesheet" type="text/css" />
+    <!-- REVOLUTION STYLE SHEETS -->
+    <link href="{% static 'home/revolution/css/settings.css' %}" rel="stylesheet" type="text/css">
+    <!-- ADD-ONS CSS FILES -->
+    <link href="{% static 'home/revolution/css/revolution.addon.particles.css' %}" rel="stylesheet" type="text/css">
+    <!-- shortcodes -->
+    <link href="{% static 'home/css/shortcodes.css' %}" rel="stylesheet" type="text/css" />
+    <!-- main style -->
+    <link href="{% static 'home/css/style.css' %}" rel="stylesheet" type="text/css" />
+    <!-- shop -->
+    <link href="{% static 'home/css/shop.css' %}" rel="stylesheet" type="text/css" />
+    <!-- responsive -->
+    <link href="{% static 'home/css/responsive.css' %}" rel="stylesheet" type="text/css" />
+    <!-- custom -->
+    <link href="{% static 'home/css/custom.css' %}" rel="stylesheet" type="text/css" />
+
+
+</head>
+
+<body>
+<!-- loading -->
+<div id="loading">
+    <div id="loading-center">
+        <img src="{% static 'home/images/loader.png' %}" alt="loder">
+    </div>
+</div>
+<!-- loading End -->
+<!-- HEADER  -->
+{% include 'home/head.html' %}
+
+<!--======= Breadcrumb Left With BG Image =======-->
+<section class="overview-block-ptb iq-over-black-70 jarallax iq-breadcrumb3 text-left iq-font-white" style="background-image: url({% static 'home/images/bg/03.jpg' %}); background-position: center center; background-repeat: no-repeat; background-size: cover;">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-sm-12">
+                <div class="iq-mb-0">
+                    <h2 class="iq-font-white iq-tw-6">Projetos</h2>
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-12">
+                <nav aria-label="breadcrumb" class="text-right">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{% url 'home:home' %}"><i class="ion-android-home"></i> Home</a></li>
+                        <li class="breadcrumb-item">Projetos</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+<!--======= Breadcrumb Left With BG Image =======-->
+<!-- Main Content -->
+<div class="main-content">
+    <!--=================================
+Blog -->
+    <section class="iq-blog overview-block-ptb">
+        <div class="container">
+            <div class="row">
+                {% block postagem %}
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="iq-blog-entry white-bg">
+                            <div class="iq-entry-image clearfix">
+                                <img class="img-fluid" src="{% static 'home/images/blog/01.jpg' %}" alt="#">
+                                <span class="tag"><i class="ion-image"></i> Categoria</span>
+                                <span class="date">12<small>Aug</small></span>
+                            </div>
+                            <div class="iq-blog-detail">
+                                <div class="iq-entry-title iq-mb-10">
+                                    <a href="#">
+                                        <h5 class="iq-tw-6">Blogpost With Image</h5>
+                                    </a>
+                                </div>
+                                <div class="iq-entry-content">
+                                    <p>Simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                                    </p>
+                                </div>
+                                <ul class="iq-entry-meta iq-mt-10">
+                                    <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i> Qwilo</a></li>
+                                    <li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i> 6 like</a></li>
+                                    <li><a href="#"><i class="fa fa-comments" aria-hidden="true"></i> 9 comments</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                {% endblock postagem %}
+            </div>
+
+            <div class="row iq-mt-40">
+                <div class="col-sm-12">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center pagination-box">
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<!--=================================
+Main Content -->
+<!--=================================
+Footer -->
+<footer class="iq-footer2 iq-over-black-80 iq-bg jarallax" style="background-image: url({% static 'home/images/bg/22.jpg' %}); background-position: left center;">
+    <div class="footer-top">
+        <div class="container">
+            <div class="row overview-block-ptb4">
+                <div class="col-lg-3 col-md-6 col-sm-12 iq-re-9-mt50">
+
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <hr>
+                    </div>
+                </div>
+                <div class="row iq-contact">
+                    <div class="col-sm-4 iq-mtb-30">
+                        <div class="blog"><i aria-hidden="true" class="ion-ios-telephone-outline"></i>
+                            <div class="content">
+                                <div class="iq-tw-6 title">Telefone</div> {{ telefone }}</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 iq-mtb-30">
+                        <div class="blog"><i aria-hidden="true" class="ion-ios-email-outline"></i>
+                            <div class="content">
+                                <div class="iq-tw-6 title">Mail</div> {{ email }}</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 iq-mtb-30">
+                        <div class="blog"><i aria-hidden="true" class="ion-ios-location-outline"></i>
+                            <div class="content">
+                                <div class="iq-tw-6 title">Endereço</div> {{ endereco }}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom iq-ptb-20">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="iq-copyright iq-mt-10 iq-font-white">Copyright <span id="copyright"> <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script></span> <a href="#">Qwilo</a> All Rights Reserved </div>
+                    </div>
+                    <div class="col-sm-6 iq-re-4-mt30">
+                        <ul class="iq-media-blog">
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google"></i></a></li>
+                            <li><a href="#"><i class="fa fa-github"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</footer>
+<!--=================================
+Footer -->
+
+
+<!--================ Jquery =================-->
+<!-- Jquery  -->
+<script src="{% static 'home/js/jquery.min.js' %}"></script>
+
+<!-- bootstrap -->
+<script src="{% static 'home/js/popper.min.js' %}"></script>
+<script src="{% static 'home/js/bootstrap.min.js' %}"></script>
+
+<!-- Google captcha code Js -->
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<!-- Mega Menu -->
+<script src="{% static 'home/js/mega-menu/mega_menu.js' %}"></script>
+<!-- Main -->
+<script src="{% static 'home/js/main.js' %}"></script>
+
+
+<!-- Custom -->
+<script src="{% static 'home/js/custom.js' %}"></script>
+</body>
+
+</html>
