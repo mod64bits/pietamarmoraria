@@ -413,7 +413,7 @@ Text Weight
 /*----------------------------------------------------------------------
 Buttons
 -----------------------------------------------------------------------*/
-.button { background: #02d871; font-size: 16px; color: #ffffff !important; padding: 10px 20px; margin-right: 10px; -webkit-border-radius: 3px;
+.button { background: #DAA520; font-size: 16px; color: #ffffff !important; padding: 10px 20px; margin-right: 10px; -webkit-border-radius: 3px;
 -moz-border-radius: 3px; border-radius: 3px; display: inline-block; vertical-align: middle; text-transform: capitalize; border: 1px solid #02d871; cursor: pointer;}
 .button:hover, .button:focus { color: #ffffff !important; background: #222222; border: 1px solid #222222; -webkit-box-shadow: 2px 10px 30px 5px rgba(0, 0, 0, 0.1); -moz-box-shadow: 2px 10px 30px 5px rgba(0, 0, 0, 0.1); box-shadow: 2px 10px 30px 5px rgba(0, 0, 0, 0.1); }
 
@@ -452,7 +452,7 @@ Read More
 .read-more.white.green a:hover { color: #222222; }
 .read-more.black a { color: #222222; }
 .read-more.black a:hover { color: #02d871; }
-.read-more.green a { color: #02d871; }
+.read-more.green a { color: #DAA520; }
 .read-more.green a:hover { color: #222222; }
 
 
@@ -465,7 +465,7 @@ Revolution Slider
 Banner Link
 **************************************/
 .banner-play a i{border: 1px solid #ffffff;
-	background:rgba(255, 255, 255, 0); 
+	background:rgba(255, 255, 255, 0);
     width: 60px;
     height: 60px;
     border-radius: 100%;
@@ -473,7 +473,7 @@ Banner Link
     line-height: 60px !important;
     font-size: 20px !important;
     color: #ffffff;}
-.banner-play a i:hover{	background:rgba(255, 255, 255, 1.0); 
+.banner-play a i:hover{	background:rgba(255, 255, 255, 1.0);
       color: #222222;}
 
 
@@ -488,26 +488,26 @@ Banner Link
 
 
 /*---------------------------------------------------------------------
-Text Color 
+Text Color
 -----------------------------------------------------------------------*/
-.iq-font-green { color: #02d871; }
-.iq-font-white { color: #ffffff; }
+.iq-font-green { color: #D3D3D3; }
+.iq-font-white { color: #DAA520; }
 .iq-font-black { color: #222222; }
 .iq-font-grey { color: #444444; }
 
 /*---------------------------------------------------------------------
-Text Decoration:  
+Text Decoration:
 -----------------------------------------------------------------------*/
 .iq-font-italic { font-style: italic; }
 .iq-lead { font-size: 16px; line-height: 24px; margin: 0; }
 
 /*---------------------------------------------------------------------
-Background Color 
+Background Color
 -----------------------------------------------------------------------*/
 .white-bg { background: #ffffff; }
 .dark-bg { background: #222222; }
 .grey-bg { background: #f6f6f6; }
-.green-bg { background: #02d871; }
+.green-bg { background: #000000; }
 .black-bg { background: #000000; }
 .no-gutter > [class*='col-'] { padding-right: 0; padding-left: 0; }
 .row-eq-height { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; }
@@ -519,7 +519,7 @@ Section Title
 -----------------------------------------------------------------------*/
 .heading-title { margin-bottom: 30px; }
 .heading-title .title { position: relative; padding-bottom: 20px; }
-.heading-title .title:before { content: ""; position: absolute; bottom: 10px; left: 50%; margin-left: -25px; width: 50px; height: 4px; background: #02d871; display: inline-block; }
+.heading-title .title:before { content: ""; position: absolute; bottom: 10px; left: 50%; margin-left: -25px; width: 50px; height: 4px; background: #DAA520; display: inline-block; }
 .heading-title p { padding: 0 100px; display: block; margin-bottom: 50px; margin-top: 10px; line-height: 30px; }
 .heading-title .title.white:before { content: ""; position: absolute; bottom: 10px; left: 50%; margin-left: -25px; width: 50px; height: 4px; background: #ffffff; display: inline-block; }
 .text-left .heading-title p, .heading-title.text-left p, .heading-title p.text-left { padding: 0; margin-bottom: 20px; }
@@ -528,7 +528,7 @@ Section Title
 
 /*Small Title*/
 .small-title { position: relative; padding-bottom: 10px; margin-bottom: 15px; }
-.small-title:before { content: ""; position: absolute; bottom: 0px; left: 0; width: 40px; height: 4px; background: #02d871; display: inline-block; }
+.small-title:before { content: ""; position: absolute; bottom: 0px; left: 0; width: 40px; height: 4px; background: #DAA520; display: inline-block; }
 .small-title.white:before { background: #fff; }
 .small-title.black:before { background: #222222; }
 
@@ -541,7 +541,7 @@ BG Effect
 .iq-bg-cover { background-size: cover; }
 
 /*---------------------------------------------------------------------
-BG Overlay 
+BG Overlay
 ---------------------------------------------------------------------*/
 
 /*************************
@@ -616,7 +616,7 @@ Dark Overlay
 [class*='iq-over-']:before { z-index: 0; }
 
 /*---------------------------------------------------------------------
-Gradient Overlay 
+Gradient Overlay
 ---------------------------------------------------------------------*/
 .iq-gradient-overlay { position: relative; }
 .iq-gradient-overlay:before { content: ""; width: 100%; height: 100%; position: absolute; left: 0; top: 0; z-index: -1; /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#222222+0,7db9e8+100&1+0,0+100 */ background: -moz-linear-gradient(left, rgba(44, 62, 80, 1) 0%, rgba(125, 185, 232, 0) 100%); /* FF3.6-15 */ background: -webkit-linear-gradient(left, rgba(44, 62, 80, 1) 0%, rgba(125, 185, 232, 0) 100%); /* Chrome10-25,Safari5.1-6 */ background: linear-gradient(to right, rgba(44, 62, 80, 1) 0%, rgba(125, 185, 232, 0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#222222', endColorstr='#007db9e8', GradientType=1); /* IE6-9 */ }
@@ -626,7 +626,7 @@ Gradient Overlay
 List Style
 ----------------------------------------------------------------------*/
 ul { padding: 0; margin: 0; padding-left: 20px; }
-ul li:after { position: absolute; color: #02d871; content: ""; font-family: 'FontAwesome'; left: 0; top: 0; }
+ul li:after { position: absolute; color: #DAA520; content: ""; font-family: 'FontAwesome'; left: 0; top: 0; }
 ul li.dark:after { color: #222222; }
 
 /*************************************
@@ -668,35 +668,35 @@ header .mega-menu>section.menu-list-items { background: #222222; }
 .mega-menu { max-width: 100%; }
 .mega-menu .menu-logo { margin: 17px 0 0; position: static !important; }
 .mega-menu .menu-logo>li>a { padding: 0; }
-.mega-menu .menu-logo > li > a img { height: 55px; position: initial; width: auto }
+.mega-menu .menu-logo > li > a img { height: 85px; position: initial; width: auto }
 .mega-menu .menu-logo>li>a:hover, .mega-menu .menu-links>li.active, .mega-menu .menu-links>li:hover { background: none; }
 .mega-menu .menu-links { float: right; }
 .mega-menu .menu-links>li { line-height: 90px; margin-right: 10px; }
 .mega-menu .menu-links>li .drop-down li, .mega-menu .menu-links>li .drop-down-multilevel li { line-height: normal; }
 .mega-menu .menu-links>li>a { font-size: 16px; z-index: 9; line-height: 36px; font-family: 'Open Sans', sans-serif; text-transform: uppercase; }
-.mega-menu .menu-links>li.active>a:before, .mega-menu .menu-links>li:hover>a:before { position: absolute; top: 0; left: 0; background: #02d871; content: ""; height: 100%; width: 100%; z-index: -1;
+.mega-menu .menu-links>li.active>a:before, .mega-menu .menu-links>li:hover>a:before { position: absolute; top: 0; left: 0; background: #DAA520; content: ""; height: 100%; width: 100%; z-index: -1;
 -webkit-border-radius: 3px;
 -moz-border-radius: 3px;
 border-radius: 3px; }
 .mega-menu .menu-logo>li { line-height: normal; }
 .mega-menu .drop-down a, .mega-menu .drop-down-tab-bar a { font-size: 14px; padding: 10px 0; }
-.mega-menu .drop-down a:hover, .mega-menu .drop-down-tab-bar a:hover, .mega-menu .drop-down a:hover i, .mega-menu .drop-down-tab-bar a:hover i { color: #02d871; }
+.mega-menu .drop-down a:hover, .mega-menu .drop-down-tab-bar a:hover, .mega-menu .drop-down a:hover i, .mega-menu .drop-down-tab-bar a:hover i { color: #DAA520; }
 .mega-menu .drop-down *, .mega-menu .drop-down-tab-bar * { color: #666; }
-.mega-menu .drop-down, .mega-menu .drop-down-tab-bar { border-top: 1px solid #02d871; -webkit-box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.15); -moz-box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.15); box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.15); }
-.mega-menu .drop-down-multilevel li:hover { background: #02d871; }
+.mega-menu .drop-down, .mega-menu .drop-down-tab-bar { border-top: 1px solid #DAA520; -webkit-box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.15); -moz-box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.15); box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.15); }
+.mega-menu .drop-down-multilevel li:hover { background: #DAA520; }
 .mega-menu .drop-down-multilevel a { font-size: 14px; color: #666; }
 .mega-menu .drop-down-multilevel { -webkit-box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.15); -moz-box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.15); box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.15); }
 
 /*Mega Menu sticky*/
 .mega-menu.desktopTopFixed .menu-list-items { padding: 0; -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.4); -moz-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.4); box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.4); -webkit-transition: all 0.3s ease-in-out; }
 .mega-menu.desktopTopFixed .menu-logo { margin: 13px 0 0; }
-.mega-menu.desktopTopFixed .menu-logo > li > a img { height: 45px; }
+.mega-menu.desktopTopFixed .menu-logo > li > a img { height: 65px; }
 .mega-menu.desktopTopFixed .menu-links>li, .mega-menu.desktopTopFixed .menu-sidebar > li { line-height: 70px; }
 .mega-menu.desktopTopFixed .menu-sidebar > li.iq-share { margin-top: 13px; }
 
 /*Mega Menu Active*/
-.mega-menu .menu-links>li.active ul li.active >a, .mega-menu .menu-links>li.active ul li.active >a i { color: #02d871; }
-.mega-menu .menu-links>li.active ul.drop-down-multilevel li.active >a{ color: #fff; background: #02d871; } 
+.mega-menu .menu-links>li.active ul li.active >a, .mega-menu .menu-links>li.active ul li.active >a i { color: #DAA520; }
+.mega-menu .menu-links>li.active ul.drop-down-multilevel li.active >a{ color: #fff; background: #DAA520; }
 .mega-menu .menu-links>li.active ul.drop-down-multilevel li.active >a i { color: #fff; z-index: inherit;}
 
 /*Mega Menu sidebar*/
@@ -704,7 +704,7 @@ border-radius: 3px; }
 .mega-menu .menu-sidebar:before { background: rgba(255, 255, 255, 0.4); left: 0; top: 50%; margin-top: -19px; width: 1px; height: 35px; content: ""; position: absolute; }
 .mega-menu .menu-sidebar > li { float: left; line-height: 90px; margin: 0 2px; }
 .mega-menu .menu-sidebar > li > a { margin: 0 10px; font-size: 16px; color: #fff; }
-.mega-menu .menu-sidebar > li > a:hover { color: #02d871; }
+.mega-menu .menu-sidebar > li > a:hover { color: #DAA520; }
 .mega-menu .menu-sidebar > li.iq-share { margin-left: 10px; margin-right: 0; margin-top: 22px; }
 
 /*Header share*/
@@ -795,24 +795,24 @@ header.white-transparent .shop-cart i,header.white .shop-cart i{color: #222222;}
 /*---- Header Topbar ----*/
 .topbar { padding: 10px 0px; background: none; border-bottom: 1px solid rgba(255, 255, 255, 0.4); }
 .topbar li { position: relative; }
-.topbar li, .topbar li a { color: #ffffff; line-height: initial; transition: all 0.3s ease-in-out; -webkit-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; -moz-transition: all 0.3s ease-in-out; -ms-transition: all 0.3s ease-in-out; }
-.topbar .topbar-right li a:hover { color: #02d871; transition: all 0.3s ease-in-out; -webkit-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; -moz-transition: all 0.3s ease-in-out; -ms-transition: all 0.3s ease-in-out; }
+.topbar li, .topbar li a { color: #222222; line-height: initial; transition: all 0.3s ease-in-out; -webkit-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; -moz-transition: all 0.3s ease-in-out; -ms-transition: all 0.3s ease-in-out; }
+.topbar .topbar-right li a:hover { color: #DAA520; transition: all 0.3s ease-in-out; -webkit-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; -moz-transition: all 0.3s ease-in-out; -ms-transition: all 0.3s ease-in-out; }
 .topbar .list-inline-item:not(:last-child) { border-right: 1px solid #ffff; padding-right: 15px; margin-right: 10px; }
-.topbar .list-inline-item a:hover { color: #02d871; }
+.topbar .list-inline-item a:hover { color: #DAA520; }
 .topbar .list-inline-item i { padding-right: 8px; }
 .topbar .topbar-right .iq-left .list-inline-item { position: relative; border: none; }
 .topbar .topbar-right .iq-left .list-inline-item:first-child:before { position: absolute; content: "/"; right: 0; top: 0; }
 
 /*Header white*/
-.header-01.white .topbar { background: #02d871; border: none; position: relative;z-index: 999999;}
-.header-01.white .topbar .topbar-right li a:hover { color: #222; }
+.header-01.white .topbar { background: #DAA520; border: none; position: relative;z-index: 999999;}
+.header-01.white .topbar .topbar-right li a:hover { color: #000000; }
 .header-01.white .mega-menu.desktopTopFixed .menu-list-items { background: #fff; }
 .header-01.white .mega-menu .menu-links>li:hover>a { color: #fff; }
 
 /*Header Dark*/
-.header-01.dark .topbar { background: #02d871; border: none; }
-.header-01.dark .topbar .topbar-right li a:hover { color: #222; }
-.header-01.dark .mega-menu>section.menu-list-items { background: #222; }
+.header-01.dark .topbar { background: #DAA520; border: none; }
+.header-01.dark .topbar .topbar-right li a:hover { color: #000000; }
+.header-01.dark .mega-menu>section.menu-list-items { background: #000000; }
 
 /*Header white transparent*/
 .header-01.white-transparent .topbar { background: rgba(255, 255, 255, 0.4); border-bottom: 1px solid rgba(255, 255, 255, 0.4); }
@@ -879,10 +879,10 @@ btn-search
 
 /*Header 02 Dark*/
 .header-02.dark .mega-menu>section.menu-list-items { background: #222; }
-.header-02.dark .mega-menu .menu-links>li.active>a, .header-02.dark .mega-menu .menu-links>li:hover>a { color: #02d871; }
+.header-02.dark .mega-menu .menu-links>li.active>a, .header-02.dark .mega-menu .menu-links>li:hover>a { color: #DAA520; }
 .header-02.dark .mega-menu .menu-links>li>a { color: #fff; }
 .header-02.dark .menu-socil li a { color: #fff; }
-.header-02.dark .menu-socil li a:hover { color: #02d871; }
+.header-02.dark .menu-socil li a:hover { color: #DAA520; }
 .header-02.dark .mega-menu .menu-mobile-collapse-trigger:before, .header-02.dark .mega-menu .menu-mobile-collapse-trigger:after, .header-02.dark .mega-menu .menu-mobile-collapse-trigger span{ background: #ffffff;}
 .header-02.dark  .mega-menu .menu-logo {border-bottom: 1px solid #333333; }
 
@@ -1021,7 +1021,7 @@ border-radius: 0; }
 .header-05 .mega-menu.desktopTopFixed .menu-list-items { background: rgba(34, 34, 34, 0.6); }
 .header-05 .mega-menu.desktopTopFixed>section.menu-list-items .button { margin-top: 12px; }
 .header-05 .shop-cart{ right: 20px; position: absolute; top: 30px;}
-.header-05 .mega-menu .menu-links {margin-right: 30px;}    
+.header-05 .mega-menu .menu-links {margin-right: 30px;}
 .header-05 .shop-cart .cart-box {top: 40px;}
 .header-05 .shop-cart a.iq-cart.black {color: #222222;}
 .header-05 .shop-cart a:hover.iq-cart.black {color: #666666 !important;}
@@ -1284,7 +1284,7 @@ Portfolio
 ----------------------------------------------------------------------*/
 
 /*************************************
-portfolio 
+portfolio
 *************************************/
 .isotope-filters { display: table; margin: 0 auto 40px; text-align: center; border: 1px solid #f2f2f2; -webkit-border-radius: 3px;
 -moz-border-radius: 3px;
@@ -1527,7 +1527,7 @@ border-radius: 2px; color: #222222; font-size: 14px; line-height: 33px; text-ali
 .iq-portfolio-05 .hoverdir .likes:hover { color: #02d871; }
 .iq-columns-4 .iq-portfolio-05 .hoverdir h5 { font-size: 20px; }
 .iq-columns-5 .iq-portfolio-05 .hoverdir h5 { font-size: 18px; }
-.iq-masonry.iq-columns-5.full-grid .iq-masonry-item .iq-portfolio-content{padding: 20px 30px;} 
+.iq-masonry.iq-columns-5.full-grid .iq-masonry-item .iq-portfolio-content{padding: 20px 30px;}
 .iq-masonry.iq-columns-5.full-grid .iq-masonry-item h5 { font-size: 16px;}
 /*************************
 Portfolio Single
@@ -1549,25 +1549,25 @@ Device Blog
 -----------------------------------------------------------------------*/
 
 /*************************************
-Device Blog 1 
+Device Blog 1
 **************************************/
 .device-aria { position: relative; overflow: hidden; }
 .device-blog1 { position: absolute; bottom: 0; right: -100px; }
 
 /*************************************
-Device Blog 1 
+Device Blog 1
 **************************************/
 .device-blog2 { margin-bottom: -70px; }
 
 /*************************************
-Device Blog 3 
+Device Blog 3
 **************************************/
 .device-aria { position: relative; overflow: hidden; }
 .device-blog3 { position: absolute; left: -100px; bottom: 0; }
 .device-blog3 img { width: 750px; }
 
 /*************************************
-Device Blog 4 
+Device Blog 4
 **************************************/
 .device-aria { position: relative; overflow: hidden; }
 .device-blog4 { position: absolute; top: 70px; height: 100%; right: 0; }
@@ -1577,7 +1577,7 @@ Features All
 ----------------------------------------------------------------------*/
 
 /*************************************
-Feature 1 
+Feature 1
 **************************************/
 .iq-feature1 .iq-blog { top: 0px; position: relative; background: #fff; -webkit-transition: all 0.3s ease-out 0s; -moz-transition: all 0.3s ease-out 0s; -ms-transition: all 0.3s ease-out 0s; -o-transition: all 0.3s ease-out 0s; transition: all 0.3s ease-out 0s; z-index: 1; border-bottom: 2px solid rgba(2, 216, 113, 0); -webkit-border-radius: 6px;
 -moz-border-radius: 6px;
@@ -1588,13 +1588,13 @@ border-radius: 6px;}
 .iq-feature1 .iq-blog:hover, .iq-feature1 .iq-blog.active { top: -4px; -webkit-box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.12); -moz-box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.12); box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.12); border-bottom: 2px solid rgba(2, 216, 113, 1); }
 
 /*************************************
-Feature 2 
+Feature 2
 **************************************/
 .iq-feature2 .iq-box img { transition: all 0.5s ease-in-out; -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; }
 .iq-feature2 .iq-box:hover img { transform: scale(1.1); -webkit-transform: scale(1.1); -moz-transition: scale(1.1); -ms-transform: scale(1.1); }
 
 /*************************************
-Feature 4 
+Feature 4
 **************************************/
 .iq-feature4 { position: relative; overflow: hidden; }
 .iq-feature4:before { z-index: 9; }
@@ -1607,7 +1607,7 @@ Feature 4
 .iq-feature4.bg-overlay-green-90 a:hover { color: #222222; }
 
 /*************************************
-Feature 5 
+Feature 5
 **************************************/
 .iq-feature5 .left { float: left; margin-right: 20px; }
 .iq-feature5 .left i { font-size: 60px; color: #02d871; display: block; }
@@ -1619,7 +1619,7 @@ Feature 5
 .iq-feature5 .right p { margin-top: 0px; }
 
 /*************************************
-Feature 6 
+Feature 6
 **************************************/
 .iq-feature6 { position: relative; overflow: hidden; -webkit-border-radius: 8px;
 -moz-border-radius: 8px;
@@ -1643,7 +1643,7 @@ border-radius: 0;}
 .iq-feature6.active .special-box .content-blog, .iq-feature6:hover .special-box .content-blog { opacity: 1; -webkit-transition: all 0.5s ease-out 0s; -moz-transition: all 0.5s ease-out 0s; -ms-transition: all 0.5s ease-out 0s; -o-transition: all 0.5s ease-out 0s; transition: all 0.5s ease-out 0s; }
 
 /*************************************
-Feature 7 
+Feature 7
 **************************************/
 .iq-feature7 .feature-content { position: relative; margin-left: 60px; }
 .iq-feature7 .feature-content:before { position: absolute; content: ""; background: #02d871; height: 3px; width: 40px; left: -60px; top: 9px; }
@@ -1720,7 +1720,7 @@ border-radius: 100px; color: #ffffff; width: 36px; height: 36px; line-height: 36
 border-radius: 100px; display: inline-block; margin-left: 6px; }
 
 /*************************************
-Feature 12 
+Feature 12
 **************************************/
 .iq-feature12 h6 { position: relative; }
 .iq-feature12 h6::before { background: #02d871; bottom: -15px; content: ""; height: 2px; position: absolute; width: 50px; left: 50%; margin-left: -25px; }
@@ -1735,7 +1735,7 @@ border-radius: 100%; font-size: 18px; position: absolute; text-align: center; li
 .iq-feature12.stap-right:before { position: absolute; left: 79%; top: 25%; background: url('../images/arrow/dashed-arrow2.png') no-repeat 0 0; content: ""; width: 174px; height: 29px; }
 
 /*************************************
-Feature 13 
+Feature 13
 **************************************/
 .iq-feature13 { -webkit-border-radius: 4px;
 -moz-border-radius: 4px;
@@ -1744,7 +1744,7 @@ border-radius: 4px;}
 .iq-feature13 p { font-size: 13px; line-height: 20px; }
 
 /*************************************
-Feature 14 
+Feature 14
 **************************************/
 .iq-feature14 { position: relative; padding: 30px 0; }
 .iq-feature14 i { font-size: 70px; }
@@ -1762,7 +1762,7 @@ Feature 14
 .iq-feature14 h5 { margin-bottom: 5px; }
 
 /*************************************
-Feature 15 
+Feature 15
 **************************************/
 .iq-feature15 .feature15-image { position: relative; }
 .iq-feature15 .icon { background: rgba(2, 216, 116, 1); height: 100%; left: 0; position: absolute; bottom: 0; text-align: center; width: 0; -webkit-transition: all 0.5s ease-out 0s; -moz-transition: all 0.5s ease-out 0s; -ms-transition: all 0.5s ease-out 0s; -o-transition: all 0.5s ease-out 0s; transition: all 0.5s ease-out 0s; }
@@ -1772,7 +1772,7 @@ Feature 15
 .iq-feature15 .about-blog .text-big { font-size: 30px; }
 
 /*************************************
-Feature 16 
+Feature 16
 **************************************/
 .iq-feature16 { background: rgba (255, 255, 255, 0); display: inline-block; }
 .iq-feature16 .icon i { font-size: 60px; color: #02d871; }
@@ -1790,7 +1790,7 @@ Tabs 1
 .light-tab .nav-pills .nav-link { border: none; -webkit-border-radius: 3px;
 -moz-border-radius: 3px;
 border-radius: 3px; margin-right: 2px; padding: 10px 25px; font-size: 16px; }
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link, .nav-pills .nav-link:hover { background: #02d871; color: #ffffff; padding: 10px 25px; -webkit-box-shadow: 2px 10px 30px 5px rgba(0, 0, 0, 0.1); -moz-box-shadow: 2px 10px 30px 5px rgba(0, 0, 0, 0.1); box-shadow: 2px 10px 30px 5px rgba(0, 0, 0, 0.1); }
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link, .nav-pills .nav-link:hover { background: #DAA520; color: #ffffff; padding: 10px 25px; -webkit-box-shadow: 2px 10px 30px 5px rgba(0, 0, 0, 0.1); -moz-box-shadow: 2px 10px 30px 5px rgba(0, 0, 0, 0.1); box-shadow: 2px 10px 30px 5px rgba(0, 0, 0, 0.1); }
 
 /*************************
 Tabs Border
@@ -1822,7 +1822,7 @@ border-radius: 3px; position: relative; border: inherit; }
 .iq-tab6 .nav-pills .nav-link { border: none; -webkit-border-radius: 3px;
 -moz-border-radius: 3px;
 border-radius: 3px; margin-right: 2px; }
-.iq-tab6 .nav-pills .nav-link.active, .iq-tab6 .nav-pills .show>.nav-link, .iq-tab6 .nav-pills .nav-link:hover { background: #02d871; color: #ffffff; -webkit-box-shadow: 0px 6px 20px -5px rgba(0, 0, 0, 0.20); -moz-box-shadow: 0px 6px 20px -5px rgba(0, 0, 0, 0.20); box-shadow: 0px 6px 20px -5px rgba(0, 0, 0, 0.20); }
+.iq-tab6 .nav-pills .nav-link.active, .iq-tab6 .nav-pills .show>.nav-link, .iq-tab6 .nav-pills .nav-link:hover { background: #DAA520; color: #ffffff; -webkit-box-shadow: 0px 6px 20px -5px rgba(0, 0, 0, 0.20); -moz-box-shadow: 0px 6px 20px -5px rgba(0, 0, 0, 0.2); box-shadow: 0px 6px 20px -5px rgba(0, 0, 0, 0.20); }
 .iq-tab6.horizontal .nav-item { width: 16.66%; text-align: center; }
 .iq-tab6.horizontal .nav-item a { padding: 15px 10px !important; margin-bottom: 0; }
 
@@ -1843,7 +1843,7 @@ Teams
 -----------------------------------------------------------------------*/
 
 /*************************************
-Teams 1 
+Teams 1
 **************************************/
 .iq-team1 .iq-team { position: relative; overflow: hidden; }
 .iq-team1 .iq-team-content { background: #02d871; color: #fff; width: 100%; padding: 20px; bottom: -100px; opacity: 0; position: absolute; text-align: center; -webkit-transition: all 0.5s ease-out 0s; -moz-transition: all 0.5s ease-out 0s; -ms-transition: all 0.5s ease-out 0s; -o-transition: all 0.5s ease-out 0s; transition: all 0.5s ease-out 0s; }
@@ -1875,7 +1875,7 @@ border-radius: 50%; border: 5px solid #02d871; background: #fafafa; -webkit-anim
 .iq-team1 .iq-team-images img { width: 100%; }
 
 /*************************************
-Teams 2 
+Teams 2
 **************************************/
 .iq-team2 .team-content { border: 1px solid #00cb69; width: 220px; height: 220px; -webkit-border-radius: 50%;
 -moz-border-radius: 50%;
@@ -1893,7 +1893,7 @@ border-radius: 50%; display: block; color: #02d871; border: 1px solid #ffffff;}
 
 
 /*************************************
-Teams 3 
+Teams 3
 **************************************/
 .iq-team3 .team-blog { position: relative; text-align: center; overflow: hidden; }
 .iq-team3 .team-blog img { width: 100%; vertical-align: bottom; }
@@ -1912,7 +1912,7 @@ Teams 3
 .iq-team3, .iq-team3 .team-blog:before, .iq-team3 .team-blog:hover:before, .iq-team3 .team-blog:hover .team-description, .iq-team3 .team-blog:hover .team-social, .iq-team3 .team-blog .team-social { -webkit-transition: all 0.3s ease-out 0s; -moz-transition: all 0.3s ease-out 0s; -ms-transition: all 0.3s ease-out 0s; -o-transition: all 0.3s ease-out 0s; transition: all 0.3s ease-out 0s; }
 
 /*************************************
-Teams 4 
+Teams 4
 **************************************/
 .iq-team4 .team-blog { border: 1px solid #f2f2f2; border-bottom: 2px solid #02d871; -webkit-border-radius: 10px;
 -moz-border-radius: 10px;
@@ -1921,7 +1921,7 @@ border-radius: 10px; }
 .iq-team4 .iq-star i { font-size: 16px; margin-right: 4px; }
 
 /*************************************
-Teams 5 
+Teams 5
 **************************************/
 .iq-team5 .team-images { position: relative; overflow: hidden; }
 .iq-team5 .team-images:before { position: absolute; top: 0; left: 0; height: 100%; width: 100%; content: ""; opacity: 0; background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 1%, rgba(2, 216, 113, 1) 100%); /* FF3.6-15 */ background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 1%, rgba(2, 216, 113, 1) 100%); /* Chrome10-25,Safari5.1-6 */ background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 1%, rgba(2, 216, 113, 1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00f0f9ff', endColorstr='#02d871', GradientType=0); /* IE6-9 */ -webkit-transition: all 0.5s ease-out 0s; -moz-transition: all 0.5s ease-out 0s; -ms-transition: all 0.5s ease-out 0s; -o-transition: all 0.5s ease-out 0s; transition: all 0.5s ease-out 0s; }
@@ -1947,7 +1947,7 @@ Teams 5
 .iq-team5 .progress-bar .progress-type { margin-left: 36px; }
 
 /*************************************
-Teams 6 
+Teams 6
 **************************************/
 .iq-team6 .team-blog { position: relative; overflow: hidden; }
 .iq-team6 .team-blog:hover:before { opacity: 1; }
@@ -1969,7 +1969,7 @@ Teams 6
 .iq-team6:hover .team-images:before { opacity: 1; }
 
 /*************************************
-Teams 7 
+Teams 7
 **************************************/
 .iq-team7 .team-blog { position: relative; text-align: center; overflow: hidden; }
 .iq-team7 .team-blog:before { position: absolute; content: ""; width: 100%; height: 100%; left: 0; top: 0; background: rgba(0, 0, 0, 0.8); opacity: 0; }
@@ -2105,7 +2105,7 @@ border-radius: 0; min-width: 300px; }
 
 
 /*---------------------------------------------------------------------
-Help 
+Help
 -----------------------------------------------------------------------*/
 .iq-help { margin-top: 100px; }
 .iq-help .form-control { -webkit-border-radius: 0;
@@ -2334,7 +2334,7 @@ Skill
 ----------------------------------------------------------------------*/
 
 /*************************************
-Skills 1 
+Skills 1
 **************************************/
 .iq-skill1 .skill-blog { background-color: #ffffff; width: 100%; height: 6px; margin: 60px 0 20px 0; }
 .iq-skill1 .progress-bar { background: #02d871; height: 100%; box-shadow: none; padding: 0px; display: inherit; transition: width .9s ease; -webkit-transition: width .9s ease; -o-transition: width .9s ease; -ms-transition: width .9s ease; -moz-transition: width .9s ease; }
@@ -2348,7 +2348,7 @@ Skills 1
 .iq-skill1 .progress-bar .progress-type:before { content: ""; position: absolute; z-index: 9; bottom: -8px; left: 10px; height: 0; width: 0; border-top: 8px solid rgba(34, 34, 34, 1.0); border-left: 10px solid transparent; }
 
 /*************************************
-Skills 2 
+Skills 2
 **************************************/
 .iq-skill2 .right-blog { width: 80%; height: 12px; background-color: #ffffff; margin-left: 60px; }
 .iq-skill2 .right-blog:not(:first-child) { margin-top: 64px; }
@@ -2360,7 +2360,7 @@ Skills 2
 .iq-skill2 .left-icon i { font-size: 36px; width: 40px; position: relative; top: -38px; }
 
 /*************************************
-Skills 3 
+Skills 3
 **************************************/
 .iq-skill3 .skill-blog { background-color: rgba(255, 255, 255, 0.5); width: 100%; height: 6px; margin: 60px 0 20px 0; }
 .iq-skill3 .progress-bar { background: #ffffff; height: 100%; box-shadow: none; padding: 0px; position: relative; transition: width .9s ease; -webkit-transition: width .9s ease; -o-transition: width .9s ease; -ms-transition: width .9s ease; -moz-transition: width .9s ease; }
@@ -2380,7 +2380,7 @@ Accordion Arrow
 .iq-accordion.arrow .card { margin-bottom: 10px; border-radius: 5px; overflow: hidden;padding:0; border: 1px solid #dddddd; background: rgba(255, 255, 255, 0);}
 .iq-accordion.arrow .card-header { transition: all 0.4s ease-in-out; transition: all 0.4s ease-in-out; -moz-transition: all 0.4s ease-in-out; -ms-transition: all 0.4s ease-in-out; -o-transition: all 0.4s ease-in-out; -webkit-transition: all 0.4s ease-in-out; padding: 0; background-color: inherit; border-bottom: none; }
 .iq-accordion.arrow .card-body {padding: 0 15px 15px 15px;}
-.iq-accordion.arrow .card-header a{ display: inline-block; font-size: 16px; width: 100%; font-weight: 600; position: relative; padding:15px 15px 15px 65px;} 
+.iq-accordion.arrow .card-header a{ display: inline-block; font-size: 16px; width: 100%; font-weight: 600; position: relative; padding:15px 15px 15px 65px;}
 .iq-accordion.arrow .card-header a:after {font-family: 'FontAwesome'; content: "\f068"; color: #ffffff; font-weight: 200; text-align: center; font-size: 18px;
     left: 15px; top: 8px; position: absolute; background: #02d871; width: 40px; height: 40px; line-height: 40px; border-radius: 100px;}
 .iq-accordion.arrow .card-header a.collapsed:after { content: "\f067"; }
@@ -2392,7 +2392,7 @@ Accordion Light
 .iq-accordion.light .card { margin-bottom: 10px; border-radius: 5px; overflow: hidden;padding:0; background: rgba(255, 255, 255, 0); border: none;}
 .iq-accordion.light .card-header { transition: all 0.4s ease-in-out; transition: all 0.4s ease-in-out; -moz-transition: all 0.4s ease-in-out; -ms-transition: all 0.4s ease-in-out; -o-transition: all 0.4s ease-in-out; -webkit-transition: all 0.4s ease-in-out; padding: 0; background-color: inherit; border-bottom: none; }
 .iq-accordion.light .card-body {padding: 0; margin-top: 5px;}
-.iq-accordion.light .card-header a{ display: inline-block; font-size: 16px; color: #ffffff; width: 100%; font-weight: 600; position: relative; padding:15px 15px 15px 55px;} 
+.iq-accordion.light .card-header a{ display: inline-block; font-size: 16px; color: #ffffff; width: 100%; font-weight: 600; position: relative; padding:15px 15px 15px 55px;}
 .iq-accordion.light .card-header a:after {background-color: rgba(255, 255, 255, 0.1); font-family: 'FontAwesome'; content: "\f068"; color: #02d871; font-weight: 200; text-align: center; font-size: 18px; left: 0;
     top: 10px; position: absolute; width: 40px; height: 40px; line-height: 40px;}
 .iq-accordion.light .card-header a.collapsed:after { content: "\f067"; }
@@ -3290,7 +3290,7 @@ Footer 22
 .iq-footer22 .tab-bottom .nav-pills .nav-link.active, .iq-footer22 .tab-bottom .nav-pills .show>.nav-link, .iq-footer22 .tab-bottom .nav-pills .nav-link:hover { padding: 10px 0 !important; }
 .iq-footer22 .tab-bottom .contact-item { margin-bottom: 30px; }
 .iq-footer22 .tab-bottom .contact-item .icon { float: left; text-align: center; margin-right: 10px; }
-.iq-footer22 .tab-bottom .contact-item .icon i { background: #02d871 none repeat scroll 0 0; color: #ffffff; display: block; font-size: 32px; height: 55px; line-height: 55px; margin: 7px 10px 10px 7px; -webkit-border-radius: 100px;
+.iq-footer22 .tab-bottom .contact-item .icon i { background: #DAA520 none repeat scroll 0 0; color: #ffffff; display: block; font-size: 32px; height: 55px; line-height: 55px; margin: 7px 10px 10px 7px; -webkit-border-radius: 100px;
 -moz-border-radius: 100px;
 border-radius: 100px; -webkit-transition: all 0.5s ease-out 0s; -moz-transition: all 0.5s ease-out 0s; -ms-transition: all 0.5s ease-out 0s; -o-transition: all 0.5s ease-out 0s; transition: all 0.5s ease-out 0s; width: 55px; }
 .iq-footer22 .tab-bottom .contact-item .content { display: table-cell; display: inline-block; }
@@ -3423,7 +3423,7 @@ Breadcrumb 3
 .iq-breadcrumb3.text-left .breadcrumb { z-index: 99; text-align: left; position: relative; color: #ffffff; margin-bottom: 0; display: inline-block; background: rgba(255, 255, 255, 0.2); padding: 15px 30px; }
 .iq-breadcrumb3.text-left .breadcrumb li { display: inline-block; }
 .iq-breadcrumb3.text-left .breadcrumb li a i { font-size: 18px; margin-right: 6px; }
-.iq-breadcrumb3.text-left .breadcrumb li, .iq-breadcrumb3.text-left .breadcrumb li a:hover { color: #02d871; }
+.iq-breadcrumb3.text-left .breadcrumb li, .iq-breadcrumb3.text-left .breadcrumb li a:hover { color: #DAA520; }
 .iq-breadcrumb3.text-left .breadcrumb li a, .iq-breadcrumb3.text-left .breadcrumb-item+.breadcrumb-item::before { color: #ffffff; margin-bottom: 0; }
 
 /*Breadcrumb with BG Color*/

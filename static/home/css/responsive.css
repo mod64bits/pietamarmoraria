@@ -238,8 +238,8 @@ Design and Developed by: iqonicthemes.in
 	.header-04 .sider-bt svg { top: -15px; }
 	.mega-menu .menu-links>li { line-height: 40px; border-bottom: 1px solid #e8e8e8; background: #fff; box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.10); }
 	.mega-menu .menu-links>li.active>a:before, .mega-menu .menu-links>li:hover>a:before { display: none; }
-	.mega-menu .menu-links>li.active>a { color: #fff; background: #02d871; }
-	.mega-menu .menu-links>li:hover>a { color: #02d871 }
+	.mega-menu .menu-links>li.active>a { color: #fff; background: #fde117; }
+	.mega-menu .menu-links>li:hover>a { color: #fde117 }
 	.header-03 .mega-menu .menu-links>li:hover>a { color: #ffffff }
 	.mega-menu .menu-links>li.active:hover>a { color: #fff; }
 	.mega-menu .menu-links { position: absolute; top: 70px; left: 0; display: inline-block; width: 100%; padding: 0 15px; }
@@ -262,7 +262,7 @@ Design and Developed by: iqonicthemes.in
 	.search__suggestion h3 { font-size: 24px; }
 	.mega-menu .menu-logo>li>a:hover, .mega-menu .menu-links>li.active, .mega-menu .menu-links>li:hover { background: #fff; }
 	header.white .mega-menu .menu-mobile-collapse-trigger:before, header.white .mega-menu .menu-mobile-collapse-trigger:after, header.white .mega-menu .menu-mobile-collapse-trigger span, .header-02 .mega-menu .menu-mobile-collapse-trigger:before, .header-02 .mega-menu .menu-mobile-collapse-trigger:after, .header-02 .mega-menu .menu-mobile-collapse-trigger span, .header-03.white .mega-menu .menu-mobile-collapse-trigger:before, .header-03.white .mega-menu .menu-mobile-collapse-trigger:after, .header-03.white .mega-menu .menu-mobile-collapse-trigger span, .header-05.white-transparent .mega-menu .menu-mobile-collapse-trigger:before, .header-05.white-transparent .mega-menu .menu-mobile-collapse-trigger:after, .header-05.white-transparent .mega-menu .menu-mobile-collapse-trigger span { background: #222; }
-	header .header-03.white-transparent .mega-menu .menu-logo>li>a:hover, .mega-menu .menu-links>li.active, .mega-menu .menu-links>li:hover { background: #02d871; }
+	header .header-03.white-transparent .mega-menu .menu-logo>li>a:hover, .mega-menu .menu-links>li.active, .mega-menu .menu-links>li:hover { background: #fde117; }
 	.header-03 .mega-menu .menu-mobile-collapse-trigger:before, .header-03 .mega-menu .menu-mobile-collapse-trigger:after, .header-03 .mega-menu .menu-mobile-collapse-trigger span { background: #fff; }
 	.header-03.white .mega-menu .menu-links>li:hover>a, .header-03.white .mega-menu .menu-links>li:hover>a:hover { color: #ffffff; }
 	.header-03.white .mega-menu .menu-links>li.active>a:hover { color: #fff; }
