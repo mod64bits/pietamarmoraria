@@ -140,8 +140,8 @@ STATICFILES_DIRS = [
 ]
 MEDIA_URL = "/media/"
 if not DEBUG:
-    STATIC_ROOT = "/home/pietamar/www/static"
-    MEDIA_ROOT = "/home/pietamar/www/media/"
+    STATIC_ROOT = "/home/agmarmor/www/static"
+    MEDIA_ROOT = "/home/agmarmor/www/media/"
 else:
     STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static")
     MEDIA_ROOT = os.path.join(BASE_DIR, "media")
