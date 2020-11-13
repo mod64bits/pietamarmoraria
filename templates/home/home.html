@@ -32,3 +32,23 @@
             </li>
     {% endfor %}
             {% endblock banner %}
+
+
+{% block nossos_servicos %}
+    <div class="col-sm-12">
+        <div class="owl-carousel arrow-4" data-autoplay="true" data-loop="true" data-nav="true" data-dots="false"
+             data-items="4" data-items-laptop="4" data-items-tab="3" data-items-mobile="2" data-items-mobile-sm="1"
+             data-margin="15">
+            {% for projeto in projetos %}
+            <div class="item">
+                <div>
+                    <img alt="" class="img-fluid wd-full" src="{{ projeto.imagem_set.first.imagem.url }}">
+                    <h6 class="iq-font-white iq-tw-5 iq-mt-15"><a href="{% url 'home:projetos_detalhe' projeto.slug%}">{{ projeto.nome }}</a></h6>
+                    <div class="iq-font-green">{{ projeto.descricao }}</div>
+                </div>
+            </div>
+
+            {% endfor %}
+        </div>
+    </div>
+{% endblock nossos_servicos %}

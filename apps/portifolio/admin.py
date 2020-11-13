@@ -2,6 +2,9 @@ from django.contrib import admin
 from .models import Categoria, Imagem, Projeto
 
 
+class ProjetoImagens(admin.TabularInline):
+    model = Imagem
+
 @admin.register(Categoria)
 class CategoriaAdmin(admin.ModelAdmin):
     list_display = ('nome', 'created', 'modified')
@@ -14,5 +17,7 @@ class ImagemAdmin(admin.ModelAdmin):
 
 @admin.register(Projeto)
 class ProjetoAdmin(admin.ModelAdmin):
+    inlines = [ProjetoImagens]
     list_display = ('nome', 'descricao_curta', 'slug', 'created', 'modified')
+
 

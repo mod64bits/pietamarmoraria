@@ -38,6 +38,8 @@
     <link href="{% static 'home/css/responsive.css' %}" rel="stylesheet" type="text/css" />
     <!-- custom -->
     <link href="{% static 'home/css/custom.css' %}" rel="stylesheet" type="text/css" />
+    {% block css %}
+    {% endblock css %}
 
 
 </head>
@@ -67,6 +69,7 @@
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="{% url 'home:home' %}"><i class="ion-android-home"></i> Home</a></li>
                         <li class="breadcrumb-item">Projetos</li>
+                        {% block caminho_url %}<li class="breadcrumb-item">Projetos</li> {% endblock caminho_url %}
                     </ol>
                 </nav>
             </div>
@@ -75,13 +78,14 @@
 </section>
 <!--======= Breadcrumb Left With BG Image =======-->
 <!-- Main Content -->
+{% block postagem %}
 <div class="main-content">
     <!--=================================
 Blog -->
     <section class="iq-blog overview-block-ptb">
         <div class="container">
             <div class="row">
-                {% block postagem %}
+
                     <div class="col-lg-6 col-sm-12">
                         <div class="iq-blog-entry white-bg">
                             <div class="iq-entry-image clearfix">
@@ -107,7 +111,7 @@ Blog -->
                             </div>
                         </div>
                     </div>
-                {% endblock postagem %}
+
             </div>
 
             <div class="row iq-mt-40">
@@ -136,6 +140,7 @@ Blog -->
         </div>
     </section>
 </div>
+{% endblock postagem %}
 <!--=================================
 Main Content -->
 <!--=================================
@@ -216,6 +221,8 @@ Footer -->
 
 <!-- Custom -->
 <script src="{% static 'home/js/custom.js' %}"></script>
+{% block scripts %}
+{% endblock scripts  %}
 </body>
 
 </html>

@@ -1,10 +1,9 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.messages.views import SuccessMessageMixin
-from django.views.generic import TemplateView, UpdateView, CreateView
+from django.views.generic import TemplateView, UpdateView, CreateView, DetailView
 from django.views.generic.list import ListView
 from .models import InformacoesSite
 from apps.portifolio.models import Projeto
-from core.envia_email import EnviaEmail
 
 from core.alxiliarServicos import servicos_home
 from apps.banner.models import Banner
@@ -18,6 +17,7 @@ class Home(TemplateView):
         context = super().get_context_data(**kwargs)
         context['servicos'] = servicos_home()
         context['banners'] = Banner.objects.filter(ativo=True)
+        context['projetos'] = Projeto.objects.filter(home=True)
         return context
 
 
@@ -38,5 +38,15 @@ class ProjetosList(ListView):
     model = Projeto
     context_object_name = 'todos_projetos'
     template_name = 'home/ListaDeProjetos.html'
+
+
+class ProjetoDetalhe(DetailView):
+    model = Projeto
+    template_name = 'home/ProjetoDetalhe.html'
+
+    # def get_context_data(self, **kwargs):
+    #     context = super().get_context_data(**kwargs)
+    #     context['now'] = timezone.now()
+    #     return context
 
 
