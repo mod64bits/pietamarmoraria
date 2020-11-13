@@ -1,7 +1,7 @@
 from django.urls import path
 from apps.home.views import Home, EditarInformacoesDoSite
 from apps.servicos.views import TodosServicos, categoria
-from .views import ContatoSite, ProjetosList
+from .views import ContatoSite, ProjetosList, ProjetoDetalhe
 
 
 app_name = 'home'
@@ -9,6 +9,7 @@ app_name = 'home'
 urlpatterns = [
     path('', Home.as_view(), name='home'),
     path('projetos/', ProjetosList.as_view(), name='projetos'),
+    path('projetos/<slug:slug>/', ProjetoDetalhe.as_view(), name='projetos_detalhe'),
     path('contato/', ContatoSite.as_view(), name='contato'),
     path('servicos/', TodosServicos.as_view(), name='todos_servicos'),
     path('categoria/<str:nome>/', categoria, name='categoria_servico'),
