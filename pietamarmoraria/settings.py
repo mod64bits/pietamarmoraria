@@ -144,7 +144,7 @@ if not DEBUG:
     MEDIA_ROOT = "/home/agmarmor/www/media/"
 else:
     STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static")
-    MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+    MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "media")
 
 LOGIN_REDIRECT_URL = '/dashboard'
 LOGOUT_REDIRECT_URL = '/'
