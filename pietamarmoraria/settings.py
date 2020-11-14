@@ -149,8 +149,8 @@ else:
 LOGIN_REDIRECT_URL = '/dashboard'
 LOGOUT_REDIRECT_URL = '/'
 
-EMAIL_HOST = "mail.pietamarmoraria.ind.br"
-EMAIL_HOST_USER = "contato@pietamarmoraria.ind.br"
+EMAIL_HOST = "mail.agmarmoraria.ind.br"
+EMAIL_HOST_USER = "contato@agmarmoraria.ind.br"
 EMAIL_HOST_PASSWORD = "5te,EM!j1sZ9"
 EMAIL_PORT = 465
 EMAIL_USE_SSL = True
