@@ -50,3 +50,7 @@ class ProjetoDetalhe(DetailView):
     #     return context
 
 
+class ServicoDetalhe(DetailView):
+    model = Projeto
+    template_name = 'home/ServicoDetalhe.html'
+

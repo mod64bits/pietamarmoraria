@@ -42,6 +42,8 @@
     <!-- custom -->
 
 <link href="{% static 'home/css/custom.css' %}" rel="stylesheet" type="text/css" />
+{% block css %}
+{% endblock css %}
 
 
 </head>
@@ -91,199 +93,130 @@ Banner -->
 Banner -->
 <!--=================================
 MAIN CONTENT -->
-<div class="main-content">
-    <!--=================================
-Services -->
-    <section class="overview-block-ptb">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12">
-                    <div class="heading-title text-center">
-                        <h2 class="title iq-tw-6">Conheça Nossos Produtos</h2>
-                        <p>Resumo dos Produtos ou serviços </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-               {% block servicos %}
-                <div class="col-lg-4 col-md-12 col-sm-12">
-                    <div class="iq-mtb-20">
-                        <img alt="alt" class="img-fluid wd-full" src="{% static 'home/images/about-us/04.jpg' %}">
-                        <h5 class="iq-font-dark iq-tw-6 iq-mt-20">Serviço Nome</h5>
-                        <p>Descrição</p>
-                        <div class="read-more green"><a href="#">Saber mais <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></div>
-                    </div>
-                </div>
-                {% endblock %}
-            </div>
-        </div>
-    </section>
-    <!--=================================
-Services -->
-    <!--=================================
+ <div class="main-content">
+        <!--=================================
 About Us -->
-
-    <!--=================================
-About Us -->
-    <!--================================
-Our Projects -->
-    <section class="overview-block-ptb6 iq-over-black-70 iq-bg jarallax" style="background-image: url({% static 'home/images/bg/03.jpg' %}); background-position: left center;">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6">
-                    <h2 class="iq-tw-6 small-title iq-font-white">Nossos Projetos</h2>
-                </div>
-            </div>
-            <div class="row iq-mt-30">
-                {% block nossos_servicos %}
-                <div class="col-sm-12">
-                    <div class="owl-carousel arrow-4" data-autoplay="true" data-loop="true" data-nav="true" data-dots="false" data-items="4" data-items-laptop="4" data-items-tab="3" data-items-mobile="2" data-items-mobile-sm="1" data-margin="15">
-                        <div class="item">
-                            <div>
-                                <img alt="" class="img-fluid wd-full" src="{% static 'home/images/about-us/04.jpg' %}">
-                                <h6 class="iq-font-white iq-tw-5 iq-mt-15"><a href="#"> Cozinha em Marmore</a></h6>
-                                <div class="iq-font-green">Descrição Curta </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div>
-                                <img alt="" class="img-fluid wd-full" src="{% static 'home/images/about-us/05.jpg' %}">
-                                <h6 class="iq-font-white iq-tw-5 iq-mt-15"><a href="#"> Banheiro em Granito </a></h6>
-                                <div class="iq-font-green">Descrição Curta </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div>
-                                <img alt="" class="img-fluid wd-full" src="{% static 'home/images/about-us/06.jpg' %}">
-                                <h6 class="iq-font-white iq-tw-5 iq-mt-15"><a href="#"> Churasqueira</a></h6>
-                                <div class="iq-font-green">Descrição Curta </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div>
-                                <img alt="" class="img-fluid wd-full" src="{% static 'home/images/about-us/04.jpg' %}">
-                                <h6 class="iq-font-white iq-tw-5 iq-mt-15"><a href="#"> Banheiro em Marmore</a></h6>
-                                <div class="iq-font-green">Descrição Curta </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div>
-                                <img alt="" class="img-fluid wd-full" src="{% static 'home/images/about-us/05.jpg' %}">
-                                <h6 class="iq-font-white iq-tw-5 iq-mt-15"><a href="#"> Escada em Marmore</a></h6>
-                                <div class="iq-font-green">Standard dummy text </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div>
-                                <img alt="" class="img-fluid wd-full" src="{% static 'home/images/about-us/06.jpg' %}">
-                                <h6 class="iq-font-white iq-tw-5 iq-mt-15"><a href="#">Escada em Granito</a></h6>
-                                <div class="iq-font-green">Descrição Curta </div>
-                            </div>
-                        </div>
+        <section class="white-bg overview-block-ptb">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 iq-mtb-15">
+                        <img class="img-fluid" src="{% static 'home/images/about-us/01.jpg' %}" alt="">
                     </div>
-                </div>
-                {% endblock nossos_servicos %}
-            </div>
-        </div>
-    </section>
-
-
-    <!--================================
-Pricing -->
-    <!--================================
-Client Feedback -->
-    <section class="overview-block-ptb iq-testimonial3">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12">
-                    <div class="heading-title text-center">
-                        <h2 class="title iq-tw-6">Depoimentos dos Nossos Clientes</h2>
-                        <p>Depoimento Dos Nossos Clientes em Nossas Redes Sociais.</p>
+                    <div class="col-lg-6 iq-mtb-15">
+                        {% block sobre %}
+                        <h2 class="small-title iq-tw-6">Excelência em <span class="nice-font"> Mármores e Granitos</span></h2>
+                        <p>You don’t have to reinvent the wheels, right? When you entrust the task of launching a strategy for your latest marketing campaign, you would get many time tested modules that have delivered consistently across different industries.</p>
+                        <p class="typo-style1">Dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                        <a href="#" class="button iq-mt-20">Read More</a>
+                    {% endblock sobre %}
                     </div>
                 </div>
             </div>
-            <div class="row iq-mt-10">
-                <div class="col-lg-12 col-md-12">
-                    <div class="owl-carousel" data-autoplay="true" data-loop="true" data-nav="false" data-dots="true" data-items="2" data-items-laptop="2" data-items-tab="2" data-items-mobile="1" data-items-mobile-sm="1" data-margin="15">
-                        <div class="item">
-                            <div class="media">
-                                <div class="media-left"> <img alt="" class="center-block mr-20" src="{% static 'home/images/team/small/01.jpg' %}"> </div>
-                                <div class="media-body">
-                                    <div class="media-heading iq-ml-20">
-                                        <p>Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.</p>
-                                        <div class="blog">
-                                            <h6 class="iq-font-green iq-tw-6 iq-mt-10">Rinks Cooper</h6>
-                                            <span>CEO, Qwilo</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="media">
-                                <div class="media-left"> <img alt="" class="center-block mr-20" src="{% static 'home/images/team/small/02.jpg' %}"> </div>
-                                <div class="media-body">
-                                    <div class="media-heading iq-ml-20">
-                                        <p>Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.</p>
-                                        <div class="blog">
-                                            <h6 class="iq-font-green iq-tw-6 iq-mt-10">JD Scot</h6>
-                                            <span>CEO, Qwilo</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="media">
-                                <div class="media-left"> <img alt="" class="center-block mr-20" src="{% static 'home/images/team/small/03.jpg' %}"> </div>
-                                <div class="media-body">
-                                    <div class="media-heading iq-ml-20">
-                                        <p>Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.</p>
-                                        <div class="blog">
-                                            <h6 class="iq-font-green iq-tw-6 iq-mt-10">Haris Morgan</h6>
-                                            <span>CEO, Qwilo</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="media">
-                                <div class="media-left"> <img alt="" class="center-block mr-20" src="{% static 'home/images/team/small/04.jpg' %}"> </div>
-                                <div class="media-body">
-                                    <div class="media-heading iq-ml-20">
-                                        <p>f type and scrambled.</p>
-                                        <div class="blog">
-                                            <h6 class="iq-font-green iq-tw-6 iq-mt-10">Nik Jorden</h6>
-                                            <span>CEO, Qwilo</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+        </section>
+
+        <section class="iq-action-blog green-bg iq-ptb-40 particles-bg">
+            <canvas id="canvas"></canvas>
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-10 col-md-12">
+                        <h3 class="iq-font-white iq-mb-10 iq-fw-4">AG Marmoraria Arte em <b>Creative</b> Granito e Marmore</h3>
+                    </div>
+                    <div class="col-lg-2 col-md-12 text-right"><a href="#" class="button white grey iq-mr-0">Purchase Now</a> </div>
+                </div>
+            </div>
+        </section>
+ <section class="iq-feature15 overview-block-ptb grey-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="heading-title text-center">
+                            <h2 class="title iq-tw-6">Projetos</h2>
+                            <p>Lorem Ipsum is simply dummy text ever sincehar the 1500s, when an unknownshil printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
                         </div>
                     </div>
                 </div>
+                <div class="row">
+                    {% block projetosHome %}
+                    <div class="col-lg-4 col-md-12 col-sm-12 iq-mt-30">
+                        <div class="feature15-blog">
+                            <div class="feature15-image"> <img class="img-fluid" src="images/blog/01.jpg" alt="#">
+                                <div class="icon"><i class="ion-ios-lightbulb-outline iq-font-white"></i></div>
+                            </div>
+                            <div class="about-blog iq-mt-20">
+                                <div class="iq-lead iq-font-grey iq-tw-6">Awesome</div>
+                                <h5 class="iq-font-grey iq-tw-6"><span class="iq-font-green text-big">01.</span> Planning Skill</h5>
+                                <p class="iq-mb-0">Lorem Ipsum is simply dummy text ever sincehar the 1500s, when an unknownshil printer took a galley of type and scram bled it to make a type specimen book.</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    {% endblock projetosHome %}
+
+                </div>
             </div>
-        </div>
-    </section>
-    <!--================================
-Client Feedback -->
-    <!--================================
-Why Choose Us -->
+        </section>
+        <section class="iq-blog overview-block-ptb">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="heading-title text-center">
+                            <h2 class="title iq-tw-6">Nossos Serviços</h2>
+                            <p>Mármore e granito são escolhas certeiras quando usados em cozinhas, pisos, banheiros e fachadas, por exemplo. Mas não é só isso: eles viraram importantes elementos decorativos que se encaixam em qualquer espaço, seja em projetos residenciais, seja em projetos comerciais.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="owl-carousel" data-autoplay="true" data-loop="true" data-nav="false" data-dots="true" data-items="3" data-items-laptop="3" data-items-tab="2" data-items-mobile="1" data-items-mobile-sm="1" data-margin="15">
 
-    <!--================================
-Why Choose Us -->
-    <!--================================
-Our Clients -->
+                            {% block servicos %}
 
-    <!--================================
-Our Clients -->
-</div>
-<!--=================================
+                            <div class="item">
+                                <div class="iq-blog-entry white-bg">
+                                    <div class="iq-entry-image clearfix">
+                                        <img class="img-fluid" src="images/blog/04.jpg" alt="#">
+                                        <span class="tag"><i class="ion-image"></i>Photos</span>
+                                        <span class="date">12<small>Aug</small></span>
+                                    </div>
+                                    <div class="iq-blog-detail">
+                                        <div class="iq-entry-title iq-mb-10">
+                                            <a href="#">
+                                                <h5 class="iq-tw-6">Blogpost With Image</h5>
+                                            </a>
+                                        </div>
+                                        <div class="iq-entry-content">
+                                            <p>Quae laboriosam sunt consectetur, assumenda provident lorem ipsum dolor sit amet, consectetur adipisicing elit. hic perspiciatis.</p>
+                                        </div>
+             '                           <ul class="iq-entry-meta iq-mt-10">
+                                            <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i> Qwilo</a></li>
+                                            <li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i> 6 like</a></li>
+                                            <li><a href="#"><i class="fa fa-comments" aria-hidden="true"></i> 9 comments</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endblock servicos %}
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--=================================
+Blog -->
+        <!--=================================
+Counter -->
+
+        <!--=================================
+Counter -->
+        <!--================================
+Our Pricing -->
+
+        <!--================================
+Our Pricing -->
+        <!--=================================
 Main Content -->
-<!--=================================
-Footer -->
+    </div>
 <footer>
     <!--================================
 Map and Contact Info -->

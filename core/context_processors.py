@@ -17,6 +17,7 @@ def site_infor(request):
         SITEINFO['instagram'] = i.instagram
         SITEINFO['twitter'] = i.twitter
 
+
     return SITEINFO
 
 

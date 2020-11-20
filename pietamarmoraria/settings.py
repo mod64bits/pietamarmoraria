@@ -16,7 +16,7 @@ SECRET_KEY = config('SECRET_KEY')
 
 DEBUG = config('DEBUG', default=True, cast=bool)
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'pietamarmoraria.ind.br', 'agmarmoraria.ind.br']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'pietamarmoraria.ind.br', 'agmarmoraria.ind.br', '192.168.88.207']
 
 AUTH_USER_MODEL = 'usuarios.User'
 
@@ -144,7 +144,8 @@ if not DEBUG:
     MEDIA_ROOT = "/home/agmarmor/www/media/"
 else:
     STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static")
-    MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "media")
+    MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+    #MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "media")
 
 LOGIN_REDIRECT_URL = '/dashboard'
 LOGOUT_REDIRECT_URL = '/'

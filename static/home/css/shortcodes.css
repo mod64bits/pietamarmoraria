@@ -1473,7 +1473,7 @@ border-radius: 50%; background: #fff; font-size: 16px; color: #02d871; line-heig
 /*---- Portfolio 03  ----*/
 .iq-portfolio-03 { position: relative; overflow: hidden; text-align: center; }
 .iq-portfolio-03 .iq-portfolio-img img { width: 100%; transition: all 0.35s ease 0s; }
-.iq-portfolio-03 .iq-portfolio-content { position: absolute; top: 50%; right: 100%; display: inline-block; width: 100%; background: rgba(2, 216, 113, 0.8); padding: 30px; transition: all 0.3s ease-in-out; -webkit-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; -ms-transition: all 0.3s ease-in-out; -webkit-transition: all 0.3s ease-in-out; transform: translate(0%, -50%); -webkit-transform: translate(0%, -50%); -moz-transform: translate(0%, -50%); -o-transform: translate(0%, -50%); -ms-transform: translate(0%, -50%); }
+.iq-portfolio-03 .iq-portfolio-content { position: absolute; top: 50%; right: 100%; display: inline-block; width: 100%; background: rgba(246, 216, 113, 0.8); padding: 30px; transition: all 0.3s ease-in-out; -webkit-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; -ms-transition: all 0.3s ease-in-out; -webkit-transition: all 0.3s ease-in-out; transform: translate(0%, -50%); -webkit-transform: translate(0%, -50%); -moz-transform: translate(0%, -50%); -o-transform: translate(0%, -50%); -ms-transform: translate(0%, -50%); }
 .iq-portfolio-03:hover .iq-portfolio-content { right: 0; }
 .iq-portfolio-03 .iq-portfolio-content span, .iq-portfolio-03 .iq-portfolio-content a { color: #fff; }
 .iq-portfolio-03 .iq-portfolio-content a:hover { color: #222222; }
@@ -1765,10 +1765,10 @@ Feature 14
 Feature 15
 **************************************/
 .iq-feature15 .feature15-image { position: relative; }
-.iq-feature15 .icon { background: rgba(2, 216, 116, 1); height: 100%; left: 0; position: absolute; bottom: 0; text-align: center; width: 0; -webkit-transition: all 0.5s ease-out 0s; -moz-transition: all 0.5s ease-out 0s; -ms-transition: all 0.5s ease-out 0s; -o-transition: all 0.5s ease-out 0s; transition: all 0.5s ease-out 0s; }
+.iq-feature15 .icon { background: rgb(246, 224, 96); height: 100%; left: 0; position: absolute; bottom: 0; text-align: center; width: 0; -webkit-transition: all 0.5s ease-out 0s; -moz-transition: all 0.5s ease-out 0s; -ms-transition: all 0.5s ease-out 0s; -o-transition: all 0.5s ease-out 0s; transition: all 0.5s ease-out 0s; }
 .iq-feature15 .icon i { color: #fff; display: inline-block; font-size: 40px; line-height: 40px; margin-top: -15px; position: relative; top: 50%; opacity: 0; }
 .iq-feature15 .feature15-blog:hover .icon i { opacity: 1.0; }
-.iq-feature15 .feature15-blog:hover .icon { width: 100%; background: rgba(2, 216, 116, 0.6); }
+.iq-feature15 .feature15-blog:hover .icon { width: 100%; background: rgba(500, 216, 116, 0.6); }
 .iq-feature15 .about-blog .text-big { font-size: 30px; }
 
 /*************************************
