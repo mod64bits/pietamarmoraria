@@ -91,9 +91,9 @@ else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': 'pietamar_db_site',
-            'USER': 'pietamar_site',
-            'PASSWORD': '+pM!dLH[nLI.',
+            'NAME': 'agmarmor_app',
+            'USER': 'agmarmor_site_ag',
+            'PASSWORD': 'AgrooT2050',
             'HOST': 'localhost',
             'PORT': '5432',
         }
