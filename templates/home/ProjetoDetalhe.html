@@ -3,67 +3,37 @@
 
 {% block caminho_url %}<li class="breadcrumb-item">{{ object.slug }}</li> {% endblock caminho_url %}
 {% block postagem %}
- <div class="main-content popup-gallery">
-        <!--=================================
-            portfolio -->
-        <section class="overview-block-ptb">
-            <div class="container">
+    <div class="main-content popup-gallery">
+    <section class="overview-block-ptb">
+        <div class="container-fluid no-padding iq-hide">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 text-center">
+                    <div class="isotope gallery-tope iq-columns-2 full-grid no-padding">
 
-                <div class="row">
-                  <div class="row iq-mt-40">
-                    <div class="col-sm-12">
-                        <h4 class="iq-tw-6 small-title iq-font-dark">{{ object.nome }}</h4>
-                        <p>{{ object.descricao_curta }}</p>
-                        <p class="iq-mt-20">{{ object.descricao }}</p>
-                    </div>
-                </div>
+                        {% for imagem in object.imagem_set.all %}
 
-                 <hr class="iq-mtb-30">
+                        <div class="iq-grid-item">
+                            <div class="iq-portfolio-03">
+                                <a class="iq-portfolio-img" href="#">
+                                    <img class="img-fluid" src="{{ imagem.imagem.url }}" alt="#">
+                                </a>
+                                <div class="iq-portfolio-content">
 
-                    <div class="col-lg-12 col-md-12 col-sm-12 text-center">
-                        <div class="isotope iq-columns-3">
-
-                            {% for img in object.imagem_set.all %}
-                            <div class="iq-grid-item ">
-                                <div class="iq-portfolio-05">
-                                    <img alt="" src="{{ img.imagem.url }}">
-                                    <div class="hoverdir">
-
-                                        <h5><a href="portfolio-single-1.html" class="title">{{ img.nome }}</a></h5>
-                                        <div class="iq-portfolio-bottom">
-                                            <ul class="iq-portfolio-icon">
-                                                <li><a class="image-link popup-img" href="{{ img.imagem.url }}"><i class="fa fa-arrows-alt"></i></a></li>
-                                            </ul>
-                                            <a class="likes" href="#">
-                                                    <i class="fa fa-heart"></i><span>{{ img.Projeto }}</span>
-                                                </a>
-                                        </div>
-                                    </div>
+                                    <h5 class="title iq-font-white"><a href="#">{{ imagem.nome }}</a></h5>
+{#                                    <span class="category iq-font-white"><a href="#">Web Design</a> | <a href="#">Graphic</a></span>#}
+                                    <ul class="iq-portfolio-icon">
+                                        <li><a href="portfolio-single-1.html"><i class="fa fa-link"></i></a></li>
+                                        <li><a class="image-link popup-img" href="{{ imagem.imagem.url }}"><i class="fa fa-arrows-alt"></i></a></li>
+                                    </ul>
                                 </div>
                             </div>
-                            {% endfor %}
-
                         </div>
+                        {% endfor %}
+
                     </div>
                 </div>
             </div>
-        </section>
-        <!--=================================
-            portfolio -->
-    <!--=================================
-              Action Box -->
-              <div class="iq-action-blog green-bg particles-bg iq-ptb-40">
-                <canvas id="canvas"></canvas>
-                <div class="container">
-                  <div class="row align-items-center">
-                    <div class="col-lg-10 col-md-9 col-sm-8  iq-font-white">
-                      <h2 class="iq-font-white iq-fw-4 iq-pb-10">Solicite um orçamento<strong class="iq-font-black"> AG Marmoraria </strong></h2>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-4 text-right"><a href="{% url 'home:contato' %}" class="button white grey iq-re-4-mt30 iq-mr-0">Orçamento</a> </div>
-                  </div>
-                </div>
-              </div>
-              <!--=================================
-              Action Box -->
-            </div>
+        </div>
+    </section>
+    </div>
 {% endblock postagem %}
