@@ -6,7 +6,8 @@ from django.core.files.uploadedfile import InMemoryUploadedFile
 from django.urls import reverse
 from django.db.models import signals
 
-from core.signals import create_slug
+
+from apps.portifolio.signals import create_slug
 
 
 class Categoria(models.Model):
@@ -35,6 +36,7 @@ class Servico(models.Model):
     slug = models.SlugField(max_length=255, unique=True, editable=False)
     slug_field_name = 'slug'
     slug_from = 'nome'
+    mes = models.CharField('Mes', max_length=3, null=True, blank=True, editable=False)
     created = models.DateTimeField('Criado em', auto_now_add=True)
     modified = models.DateTimeField('Modificado em', auto_now=True)
     mostra_na_home = models.BooleanField('Mostra na Pagina Inicial?', default=True)
@@ -61,6 +63,21 @@ class Servico(models.Model):
         return reverse('servicos:novo-servico')
 
 
+class ImagemServico(models.Model):
+    nome = models.CharField('Nome', max_length=50)
+    imagem = models.ImageField('Imagem', upload_to='uploads/%Y/%m/%d/')
+    imagem_servico = models.ForeignKey(Servico, name='Projeto', on_delete=models.CASCADE)
+    created = models.DateTimeField('Criado em', auto_now_add=True)
+    modified = models.DateTimeField('Modificado em', auto_now=True)
+
+    class Meta:
+        verbose_name_plural = 'Imagens'
+
+    def __str__(self):
+        return self.nome
+
+
+signals.post_save.connect(create_slug, sender=ImagemServico)
 signals.post_save.connect(create_slug, sender=Servico)
 
 

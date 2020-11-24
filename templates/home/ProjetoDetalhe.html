@@ -3,6 +3,22 @@
 
 {% block caminho_url %}<li class="breadcrumb-item">{{ object.slug }}</li> {% endblock caminho_url %}
 {% block postagem %}
+    <section class="white-bg overview-block-ptb">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 iq-mtb-15">
+                        <img class="img-fluid" src="{{ object.imagem_de_capa.url }}" alt="">
+                    </div>
+                    <div class="col-lg-6 iq-mtb-15">
+                        <h2 class="small-title iq-tw-6">{{ object.nome|upper }}</h2>
+                        <p>{{ object.descricao_curta }}</p>
+                        <p class="typo-style1">{{ object.descricao }}</p>
+                        <a href="{% url 'home:contato' %}" class="button iq-mt-20">Orçamento</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     <div class="main-content popup-gallery">
     <section class="overview-block-ptb">
         <div class="container-fluid no-padding iq-hide">
@@ -36,4 +52,5 @@
         </div>
     </section>
     </div>
+
 {% endblock postagem %}

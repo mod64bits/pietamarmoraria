@@ -18,16 +18,16 @@
                 <div class="iq-entry-image clearfix">
                     <img class="img-fluid " src="{{ servico.imagem.url }}" alt="#">
                     <span class="tag"><i class="ion-image"></i>{{ servico.categoria }}</span>
-                    <span class="date">12<small>Aug</small></span>
+                    <span class="date">{{ servico.created.day }}<small>{{ servico.mes }}</small></span>
                 </div>
                 <div class="iq-blog-detail">
                     <div class="iq-entry-title iq-mb-10">
-                        <a href="#">
-                            <h5 class="iq-tw-6">Blogpost With Image</h5>
+                        <a href="{% url 'home:servico_detalhe' servico.slug %}">
+                            <h5 class="iq-tw-6">{{ servico.nome }}</h5>
                         </a>
                     </div>
                     <div class="iq-entry-content">
-                        <p>Quae laboriosam sunt consectetur, assumenda provident lorem ipsum dolor sit amet, consectetur adipisicing elit. hic perspiciatis.</p>
+                        <p>{{ servico.descricao_curta }}</p>
                     </div>
                     {#                    <ul class="iq-entry-meta iq-mt-10">#}
                     {#                        <li><a href="#"><i class="fa fa-user"  aria-hidden="true"></i> Qwilo</a></li>#}

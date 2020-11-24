@@ -145,63 +145,10 @@ Blog -->
 Main Content -->
 <!--=================================
 Footer -->
-<footer class="iq-footer2 iq-over-black-80 iq-bg jarallax" style="background-image: url({% static 'home/images/bg/22.jpg' %}); background-position: left center;">
-    <div class="footer-top">
-        <div class="container">
-            <div class="row overview-block-ptb4">
-                <div class="col-lg-3 col-md-6 col-sm-12 iq-re-9-mt50">
 
-                </div>
-                <div class="row">
-                    <div class="col-sm-12">
-                        <hr>
-                    </div>
-                </div>
-                <div class="row iq-contact">
-                    <div class="col-sm-4 iq-mtb-30">
-                        <div class="blog"><i aria-hidden="true" class="ion-ios-telephone-outline"></i>
-                            <div class="content">
-                                <div class="iq-tw-6 title">Telefone</div> {{ telefone }}</div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 iq-mtb-30">
-                        <div class="blog"><i aria-hidden="true" class="ion-ios-email-outline"></i>
-                            <div class="content">
-                                <div class="iq-tw-6 title">Mail</div> {{ email }}</div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 iq-mtb-30">
-                        <div class="blog"><i aria-hidden="true" class="ion-ios-location-outline"></i>
-                            <div class="content">
-                                <div class="iq-tw-6 title">Endereço</div> {{ endereco }}</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom iq-ptb-20">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="iq-copyright iq-mt-10 iq-font-white">Copyright <span id="copyright"> <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script></span> <a href="#">AG Marmoraria</a> All Rights Reserved </div>
-                    </div>
-                    <div class="col-sm-6 iq-re-4-mt30">
-                        <ul class="iq-media-blog">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-google"></i></a></li>
-                            <li><a href="#"><i class="fa fa-github"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-</footer>
 <!--=================================
 Footer -->
-
+{% include 'home/foot.html' %}
 
 <!--================ Jquery =================-->
 <!-- Jquery  -->

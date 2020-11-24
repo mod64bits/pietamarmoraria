@@ -4,6 +4,8 @@ from django.views.generic import TemplateView, UpdateView, CreateView, DetailVie
 from django.views.generic.list import ListView
 from .models import InformacoesSite
 from apps.portifolio.models import Projeto
+from apps.servicos.models import Servico
+
 
 from core.alxiliarServicos import servicos_home
 from apps.banner.models import Banner
@@ -51,6 +53,6 @@ class ProjetoDetalhe(DetailView):
 
 
 class ServicoDetalhe(DetailView):
-    model = Projeto
+    model = Servico
     template_name = 'home/ServicoDetalhe.html'
 
