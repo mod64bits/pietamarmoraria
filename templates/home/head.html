@@ -58,12 +58,11 @@
                                 <!-- active class -->
                                 <li class="{% if url_name == 'home'%}active{% endif %}"><a href="{% url 'home:home' %}">Home</a></li>
                                 <li><a href="javascript:void(0)">Sobre</a></li>
-                                <li class="{% if url_name == 'projetos' or url_name == 'todos_servicos' or url_name == 'categoria_servico' or url_name == 'projetos_detalhe'%}active{% endif %}"><a href="javascript:void(0)">PORTFÓLIO</a>
+                                <li class="{% if url_name == 'projetos' or url_name == 'todos_servicos' or url_name == 'categoria_servico' or url_name == 'projetos_detalhe' or url_name == 'servico_detalhe'%}active{% endif %}"><a href="javascript:void(0)">PORTFÓLIO</a>
                                     <!-- drop down multilevel  -->
                                     <ul class="drop-down-multilevel">
                                         <li class="{% if url_name == 'projetos' or url_name == 'projetos_detalhe' %}active{%endif %}"><a href="{% url 'home:projetos' %}">PROJETOS</a></li>
-                                        <li  class="{% if url_name == 'todos_servicos' or url_name == 'categoria_servico'%}active{%endif %}"><a href="{% url 'home:todos_servicos' %}">SERVICOS</a></li>
-                                        <li><a href="#">Produto 3</a></li>
+                                        <li  class="{% if url_name == 'todos_servicos' or url_name == 'categoria_servico' or url_name == 'servico_detalhe'%}active{%endif %}"><a href="{% url 'home:todos_servicos' %}">SERVICOS</a></li>
                                     </ul>
                                 </li>
                                 <li class="{% if url_name == 'contato'%}active{% endif %}"><a href="{% url 'home:contato' %}">Contato</a></li>
