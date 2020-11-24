@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Pieta Todos Os Projetos</title>
+    <title>Projetos</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -68,8 +68,8 @@
                 <nav aria-label="breadcrumb" class="text-right">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="{% url 'home:home' %}"><i class="ion-android-home"></i> Home</a></li>
-                        <li class="breadcrumb-item">Projetos</li>
-                        {% block caminho_url %}<li class="breadcrumb-item">Projetos</li> {% endblock caminho_url %}
+                        <li class="breadcrumb-item">Serviços</li>
+                        {% block caminho_url %}<li class="breadcrumb-item">{{ object.slug }}</li> {% endblock caminho_url %}
                     </ol>
                 </nav>
             </div>

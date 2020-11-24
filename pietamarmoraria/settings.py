@@ -152,6 +152,6 @@ LOGOUT_REDIRECT_URL = '/'
 
 EMAIL_HOST = "mail.agmarmoraria.ind.br"
 EMAIL_HOST_USER = "contato@agmarmoraria.ind.br"
-EMAIL_HOST_PASSWORD = "5te,EM!j1sZ9"
+EMAIL_HOST_PASSWORD = "contatoAgMarm5010"
 EMAIL_PORT = 465
 EMAIL_USE_SSL = True

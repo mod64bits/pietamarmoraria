@@ -1,8 +1,4 @@
-import os
-from django.db.models.signals import post_save
-from django.dispatch import receiver
-from core.ApiInstagram import PostInstagram
-from core.envia_email import EnviaEmail
+from django.core.mail import send_mail
 from django.template.defaultfilters import slugify
 
 
@@ -18,8 +14,17 @@ def contato_signal(sender, instance, signal, *args, **kwargs):
             slug = '%s-' % instance.id + slugify(getattr(instance, slug_from))
             # set slug
             setattr(instance, slug_name, slug)
-            mensagem = f"Nome: {instance.nome}, Telefone: {instance.whatsapp}, Email: {instance.email}, " \
-                       f"Mensagem: {instance.mensagem}"
-            enviar = EnviaEmail(mensagem)
-            enviar.rementente_mensagem()
+            nome = instance.nome
+            mensagem = instance.mensagem
+            email = instance.email
+            whatsapp = instance.whatsapp
+
+            send_mail(
+                'contato do site',
+                f'Novo Contato Realizado no site de {nome}, email {email}, whatsapp {whatsapp}, mensagem: {mensagem}',
+                'contato@agmarmoraria.ind.br',
+                ['ag@agmarmoraria.ind.br'],
+                fail_silently=False,
+            )
+
             instance.save()

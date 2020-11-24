@@ -1,8 +1,5 @@
 from django.db import models
 from django.urls import reverse
-from core.signals import create_slug
-from django.db.models import signals
-from django.core.mail import send_mail
 from django.db.models.signals import post_save
 from .sinais import contato_signal
 
@@ -19,6 +16,8 @@ class Contato(models.Model):
     created = models.DateTimeField('Criado em', auto_now_add=True)
     modified = models.DateTimeField('Modificado em', auto_now=True)
 
+
+
     def get_absolute_url(self):
         return reverse('home:contato')
 
@@ -26,6 +25,7 @@ class Contato(models.Model):
         return self.nome
 
 
-post_save.connect(contato_signal, sender=Contato)
+post_save.connect(contato_signal, dispatch_uid=Contato)
+
 
 

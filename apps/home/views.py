@@ -5,8 +5,6 @@ from django.views.generic.list import ListView
 from .models import InformacoesSite
 from apps.portifolio.models import Projeto
 from apps.servicos.models import Servico
-
-
 from core.alxiliarServicos import servicos_home
 from apps.banner.models import Banner
 from apps.contato.forms import NovoContatoForm
@@ -34,6 +32,10 @@ class ContatoSite(SuccessMessageMixin, CreateView):
     form_class = NovoContatoForm
     template_name = 'home/Contato.html'
     success_message = "%(nome)s"
+
+
+
+
 
 
 class ProjetosList(ListView):
