@@ -4,6 +4,7 @@ __pycache__/
 *$py.class
 .idea/
 media/
+apps/home/migrations/
 settings.ini
 # C extensions
 *.so
