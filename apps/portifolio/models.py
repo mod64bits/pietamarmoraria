@@ -22,7 +22,6 @@ class Projeto(models.Model):
     nome = models.CharField('Nome', max_length=50)
     descricao_curta = models.CharField('Descrição Curta', max_length=100, help_text='Descrição Curta para home')
     descricao = models.TextField('Descrição')
-    sobre = models.TextField('Sobre ', help_text='Sobre o projeto', null=True, blank=True)
     categoria_projeto = models.ForeignKey(Categoria, name="Categoria", on_delete=models.PROTECT)
     home = models.BooleanField('Mostrar na Home?', default=True)
     imagem_de_capa = models.ImageField('Imagem de Capa', upload_to='projetos')
@@ -57,7 +56,6 @@ class Imagem(models.Model):
 
     class Meta:
         verbose_name_plural = 'Imagens'
-
 
     def __str__(self):
         return self.nome
